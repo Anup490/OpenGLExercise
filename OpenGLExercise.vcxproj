@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Exercise1Easy.cpp" />
+    <ClCompile Include="Exercise1Hard.cpp" />
     <ClCompile Include="Exercise1Medium.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Main.cpp" />

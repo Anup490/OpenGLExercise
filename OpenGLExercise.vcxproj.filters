@@ -30,6 +30,9 @@
     <ClCompile Include="Exercise1Medium.cpp">
       <Filter>Source Files\Exercise1</Filter>
     </ClCompile>
+    <ClCompile Include="Exercise1Hard.cpp">
+      <Filter>Source Files\Exercise1</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Exercise1.h">

@@ -14,24 +14,24 @@ namespace Exercise1
 		GLFWwindow* window = glfwCreateWindow(windowWidth, windowHeight, windowTitle, NULL, NULL);
 		if (window == NULL)
 		{
-			std::cout << "" << std::endl;
+			std::cout << "Error loading window for medium_problem" << std::endl;
 			glfwTerminate();
 			return -1;
 		}
 		glfwMakeContextCurrent(window);
 		gladLoadGL();
 		glViewport(0,0,windowWidth,windowHeight);
-		bool isColorWhite = false;
+		bool is_color_white = false;
 		while (!glfwWindowShouldClose(window))
 		{
-			if (isColorWhite) {
+			if (is_color_white) {
 				glClearColor(1.0f, 0.65f, 0.0f, 1.0f);
-				isColorWhite = false;
+				is_color_white = false;
 			}
 			else
 			{
 				glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-				isColorWhite = true;
+				is_color_white = true;
 			}
 			glClear(GL_COLOR_BUFFER_BIT);
 			glfwSwapBuffers(window);
