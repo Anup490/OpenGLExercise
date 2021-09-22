@@ -31,13 +31,14 @@ namespace Exercise1
 		glfwMakeContextCurrent(window);
 		gladLoadGL();
 		glViewport(0, 0, windowWidth, windowHeight);
-		Color color = { 255, 165, 0, 255 };
+		Color color = { 0, 1, 2, 255 };
 		double prevTime = glfwGetTime();
 		while (!glfwWindowShouldClose(window))
 		{
 			double crntTime = glfwGetTime();
 			if ((crntTime - prevTime) > 1/60)
 			{
+				std::cout << "R : " << color.R << ", G : " << color.G << ", B : " << color.B << std::endl;
 				color = manipulate_color(color);
 				glClearColor(to_zero_to_one_range(color.R), to_zero_to_one_range(color.G), to_zero_to_one_range(color.B), to_zero_to_one_range(color.A));
 				glClear(GL_COLOR_BUFFER_BIT);
@@ -53,29 +54,29 @@ namespace Exercise1
 	Color manipulate_color(Color color)
 	{
 		Color newColor = color;
-		if ((color.R <= 255) && (color.R > 0) && (color.G == 255) && (color.B == 255))
-		{
-			--newColor.R;
-		}
-		else if ((color.R == 0) && (color.G <= 255) && (color.G > 0) && (color.B == 255))
-		{
-			--newColor.G;
-		}
-		else if ((color.R == 0) && (color.G == 0) && (color.B <= 255) && (color.B > 0))
-		{
-			--newColor.B;
-		}
-		else if ((color.R >= 0) && (color.R < 255) && (color.G == 0) && (color.B == 0))
+		if ((color.R >= 0) && (color.R < 255) && (color.G >= 0) && (color.G < 255) && (color.B == 0))
 		{
 			++newColor.R;
 		}
-		else if ((color.R == 255) && (color.G >= 0) && (color.G < 255) && (color.B == 0))
+		else if ((color.R > 0) && (color.R <= 255) && (color.G >= 0) && (color.G < 255) && (color.B >= 0) && (color.B < 255))
 		{
 			++newColor.G;
 		}
-		else if ((color.R == 255) && (color.G == 255) && (color.B >= 0) && (color.B < 255))
+		else if ((color.R > 0) && (color.R <= 255) && (color.G > 0) && (color.G <= 255) && (color.B >= 0) && (color.B < 255))
 		{
 			++newColor.B;
+		}
+		else if ((color.R > 0) && (color.R <= 255) && (color.G > 0) && (color.G <= 255) && (color.B > 0) && (color.B <= 255) )
+		{
+			--newColor.R;
+		}
+		else if ((color.R >= 0) && (color.R < 255) && (color.G > 0) && (color.G <= 255) && (color.B > 0) && (color.B <= 255))
+		{
+			--newColor.G;
+		}
+		else if ((color.R >= 0) && (color.R < 255) && (color.G >= 0) && (color.G < 255) && (color.B > 0) && (color.B <= 255))
+		{
+			--newColor.B;
 		}
 		return newColor;
 	}
