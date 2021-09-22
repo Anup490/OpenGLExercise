@@ -31,14 +31,13 @@ namespace Exercise1
 		glfwMakeContextCurrent(window);
 		gladLoadGL();
 		glViewport(0, 0, windowWidth, windowHeight);
-		Color color = { 0, 1, 2, 255 };
+		Color color = { 1, 0, 1, 255 };
 		double prevTime = glfwGetTime();
 		while (!glfwWindowShouldClose(window))
 		{
 			double crntTime = glfwGetTime();
 			if ((crntTime - prevTime) > 1/60)
 			{
-				std::cout << "R : " << color.R << ", G : " << color.G << ", B : " << color.B << std::endl;
 				color = manipulate_color(color);
 				glClearColor(to_zero_to_one_range(color.R), to_zero_to_one_range(color.G), to_zero_to_one_range(color.B), to_zero_to_one_range(color.A));
 				glClear(GL_COLOR_BUFFER_BIT);
