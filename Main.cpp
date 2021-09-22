@@ -1,6 +1,6 @@
-#include <iostream>
+#include "Exercise1.h"
 
 int main()
 {
-	std::cout << "Hello";
+	return easy_problem_3();
 }
