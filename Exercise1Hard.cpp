@@ -42,7 +42,6 @@ namespace Exercise1
 			double crntTime = glfwGetTime();
 			if ((crntTime - prevTime) > 1/60)
 			{
-				std::cout << "R : " << color.R << ", G : " << color.G << ", B : " << color.B << std::endl;
 				color = manipulate_color(color);
 				glClearColor(to_zero_to_one_range(color.R), to_zero_to_one_range(color.G), to_zero_to_one_range(color.B), to_zero_to_one_range(color.A));
 				glClear(GL_COLOR_BUFFER_BIT);
