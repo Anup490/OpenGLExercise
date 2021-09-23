@@ -11,7 +11,11 @@ namespace Exercise1
 	};
 
 	using Color = structColor;
+	
+	static bool should_decrement = true;
 	static Color manipulate_color(Color color);
+	static Color incrementRGB(Color color);
+	static Color decrementRGB(Color color);
 	static float to_zero_to_one_range(int value);
 
 	int hard_problem()
@@ -38,6 +42,7 @@ namespace Exercise1
 			double crntTime = glfwGetTime();
 			if ((crntTime - prevTime) > 1/60)
 			{
+				std::cout << "R : " << color.R << ", G : " << color.G << ", B : " << color.B << std::endl;
 				color = manipulate_color(color);
 				glClearColor(to_zero_to_one_range(color.R), to_zero_to_one_range(color.G), to_zero_to_one_range(color.B), to_zero_to_one_range(color.A));
 				glClear(GL_COLOR_BUFFER_BIT);
@@ -52,32 +57,49 @@ namespace Exercise1
 
 	Color manipulate_color(Color color)
 	{
-		Color newColor = color;
-		if ((color.R >= 0) && (color.R < 255) && (color.G >= 0) && (color.G < 255) && (color.B == 0))
+		return (should_decrement) ? decrementRGB(color) : incrementRGB(color);
+	}
+
+	Color incrementRGB(Color color)
+	{
+		if (color.R < 255)
 		{
-			++newColor.R;
+			color.R += 1;
 		}
-		else if ((color.R > 0) && (color.R <= 255) && (color.G >= 0) && (color.G < 255) && (color.B >= 0) && (color.B < 255))
+		else if (color.G < 255)
 		{
-			++newColor.G;
+			color.G += 1;
 		}
-		else if ((color.R > 0) && (color.R <= 255) && (color.G > 0) && (color.G <= 255) && (color.B >= 0) && (color.B < 255))
+		else if (color.B < 255)
 		{
-			++newColor.B;
+			color.B += 1;
 		}
-		else if ((color.R > 0) && (color.R <= 255) && (color.G > 0) && (color.G <= 255) && (color.B > 0) && (color.B <= 255) )
+		else
 		{
-			--newColor.R;
+			should_decrement = true;
 		}
-		else if ((color.R >= 0) && (color.R < 255) && (color.G > 0) && (color.G <= 255) && (color.B > 0) && (color.B <= 255))
+		return color;
+	}
+
+	Color decrementRGB(Color color)
+	{
+		if (color.R > 0)
 		{
-			--newColor.G;
+			color.R -= 1;
 		}
-		else if ((color.R >= 0) && (color.R < 255) && (color.G >= 0) && (color.G < 255) && (color.B > 0) && (color.B <= 255))
+		else if (color.G > 0)
 		{
-			--newColor.B;
+			color.G -= 1;
 		}
-		return newColor;
+		else if (color.B > 0)
+		{
+			color.B -= 1;
+		}
+		else
+		{
+			should_decrement = false;
+		}
+		return color;
 	}
 
 	float to_zero_to_one_range(int value)
