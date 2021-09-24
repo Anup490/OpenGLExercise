@@ -154,11 +154,12 @@
     <ClCompile Include="Exercise1Easy.cpp" />
     <ClCompile Include="Exercise1Hard.cpp" />
     <ClCompile Include="Exercise1Medium.cpp" />
+    <ClCompile Include="Exercise2Easy.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Exercise1.h" />
+    <ClInclude Include="Exercises.h" />
     <ClInclude Include="Headers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

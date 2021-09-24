@@ -11,16 +11,16 @@ namespace Exercise1
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 		const char* windowTitle = "OpenGLWindowMediumProblem";
-		GLFWwindow* window = glfwCreateWindow(windowWidth, windowHeight, windowTitle, NULL, NULL);
+		GLFWwindow* window = glfwCreateWindow(window_width, window_height, windowTitle, NULL, NULL);
 		if (window == NULL)
 		{
-			std::cout << "Error loading window for medium_problem" << std::endl;
+			std::cout << "Error loading window for Exercise1::medium_problem" << std::endl;
 			glfwTerminate();
 			return -1;
 		}
 		glfwMakeContextCurrent(window);
 		gladLoadGL();
-		glViewport(0,0,windowWidth,windowHeight);
+		glViewport(0,0,window_width,window_height);
 		bool is_color_white = false;
 		while (!glfwWindowShouldClose(window))
 		{

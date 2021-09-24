@@ -9,4 +9,9 @@ namespace Exercise1
 	int hard_problem();
 }
 
+namespace Exercise2
+{
+	int easy_problem_1();
+}
+
 

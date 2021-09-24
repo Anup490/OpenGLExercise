@@ -1,6 +1,6 @@
-#include "Exercise1.h"
+#include "Exercises.h"
 
 int main()
 {
-	return Exercise1::hard_problem();
+	return Exercise2::easy_problem_1();
 }

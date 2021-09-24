@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Exercise1">
       <UniqueIdentifier>{461887ee-cd28-4cc3-a84b-b517088c804d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Exercise2">
+      <UniqueIdentifier>{c4784f07-0de1-424d-904b-33d370d659b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -33,12 +36,15 @@
     <ClCompile Include="Exercise1Hard.cpp">
       <Filter>Source Files\Exercise1</Filter>
     </ClCompile>
+    <ClCompile Include="Exercise2Easy.cpp">
+      <Filter>Source Files\Exercise2</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Exercise1.h">
+    <ClInclude Include="Headers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Headers.h">
+    <ClInclude Include="Exercises.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

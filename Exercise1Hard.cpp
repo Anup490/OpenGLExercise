@@ -25,16 +25,16 @@ namespace Exercise1
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 		const char* windowTitle = "OpenGLWindowHardProblem";
-		GLFWwindow* window = glfwCreateWindow(windowWidth, windowHeight, windowTitle, NULL, NULL);
+		GLFWwindow* window = glfwCreateWindow(window_width, window_height, windowTitle, NULL, NULL);
 		if (window == NULL)
 		{
-			std::cout << "Error loading window for hard_problem" << std::endl;
+			std::cout << "Error loading window for Exercise1::hard_problem" << std::endl;
 			glfwTerminate();
 			return -1;
 		}
 		glfwMakeContextCurrent(window);
 		gladLoadGL();
-		glViewport(0, 0, windowWidth, windowHeight);
+		glViewport(0, 0, window_width, window_height);
 		Color color = { 1, 0, 1, 255 };
 		double prevTime = glfwGetTime();
 		while (!glfwWindowShouldClose(window))

@@ -3,5 +3,5 @@
 #include <glad/glad.h>
 #include <glfw/glfw3.h>
 
-const int windowHeight = 800;
-const int windowWidth = 800;
+const int window_height = 800;
+const int window_width = 800;
