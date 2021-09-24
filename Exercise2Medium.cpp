@@ -101,7 +101,7 @@ namespace Exercise2
 		return 0;
 	}
 
-	int medium_problem_1()
+	int medium_problem_2()
 	{
 		return 0;
 	}
