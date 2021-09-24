@@ -2,5 +2,5 @@
 
 int main()
 {
-	return Exercise2::medium_problem_1();
+	return Exercise2::medium_problem_2();
 }

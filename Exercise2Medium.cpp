@@ -40,7 +40,7 @@ namespace Exercise2
 		GLFWwindow* window = glfwCreateWindow(window_width, window_height, window_title, NULL, NULL);
 		if (window == NULL)
 		{
-			std::cout << "Error loading window for Exercise1::medium_problem_1" << std::endl;
+			std::cout << "Error loading window for Exercise2::medium_problem_1" << std::endl;
 			glfwTerminate();
 			return -1;
 		}
@@ -103,6 +103,97 @@ namespace Exercise2
 
 	int medium_problem_2()
 	{
+		float triangle_vertices[] =
+		{
+			-0.5f, -0.5f, 0.0f,
+			 0.5f, -0.5f, 0.0f,
+			-0.5f, sqrt(0.15f), 0.0f
+		};
+
+		const char* vertex_shader_source = 
+		"#version 330 core\n"
+		"layout (location = 0) in vec3 aPos;\n"
+		"void main()\n"
+		"{\n"
+		"	gl_Position = vec4(aPos, 1.0f);\n"
+		"}\n";
+
+		const char* fragment_shader_source =
+		"#version 330 core\n"
+		"out vec4 FragColor;\n"
+		"void main()\n"
+		"{\n"
+		"	FragColor = vec4(0.78f, 0.56f, 0.93f, 1.0f);\n"
+		"}\n";
+
+		int has_shader_compiled;
+
+		glfwInit();
+		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+		const char* window_title = "OpenGLExercise2MediumProblem 2";
+		GLFWwindow* window = glfwCreateWindow(window_width, window_height, window_title, NULL, NULL);
+		if (window == NULL)
+		{
+			std::cout << "Error loading window for Exercise2::medium_problem_2" << std::endl;
+			glfwTerminate();
+		}
+		glfwMakeContextCurrent(window);
+		gladLoadGL();
+		glViewport(0, 0, window_width, window_height);
+
+		GLuint VBOs[1], VAOs[1];
+		glGenBuffers(1, VBOs);
+		glGenVertexArrays(1, VAOs);
+		glBindBuffer(GL_ARRAY_BUFFER, VBOs[0]);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(triangle_vertices), triangle_vertices, GL_STATIC_DRAW);
+		glBindVertexArray(VAOs[0]);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+		glEnableVertexAttribArray(0);
+		glBindBuffer(1, 0);
+		glBindVertexArray(0);
+
+		GLuint vertex_shader = glCreateShader(GL_VERTEX_SHADER);
+		glShaderSource(vertex_shader, 1, &vertex_shader_source, NULL);
+		glCompileShader(vertex_shader);
+		glGetShaderiv(vertex_shader, GL_COMPILE_STATUS, &has_shader_compiled);
+		if (!has_shader_compiled)
+		{
+			std::cout << "Error compiling vertex shader" << std::endl;
+		}
+
+		GLuint fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
+		glShaderSource(fragment_shader, 1, &fragment_shader_source, NULL);
+		glCompileShader(fragment_shader);
+		glGetShaderiv(fragment_shader, GL_COMPILE_STATUS, &has_shader_compiled);
+		if (!has_shader_compiled)
+		{
+			std::cout << "Error compiling fragment shader" << std::endl;
+		}
+
+		GLuint shader_program = glCreateProgram();
+		glAttachShader(shader_program, vertex_shader);
+		glAttachShader(shader_program, fragment_shader);
+		glLinkProgram(shader_program);
+		glGetShaderiv(shader_program, GL_COMPILE_STATUS, &has_shader_compiled);
+		if (!has_shader_compiled)
+		{
+			std::cout << "Error linking shader program" << std::endl;
+		}
+
+		while (!glfwWindowShouldClose(window))
+		{
+			glClearColor(0.57f, 0.81f, 0.12f, 1.0f);
+			glClear(GL_COLOR_BUFFER_BIT);
+			glUseProgram(shader_program);
+			glBindVertexArray(VAOs[0]);
+			glDrawArrays(GL_TRIANGLES, 0, 3);
+			glfwSwapBuffers(window);
+			glfwPollEvents();
+		}
+		glfwDestroyWindow(window);
+		glfwTerminate();
 		return 0;
 	}
 }
