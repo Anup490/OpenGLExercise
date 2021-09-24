@@ -100,5 +100,10 @@ namespace Exercise2
 		glfwTerminate();
 		return 0;
 	}
+
+	int medium_problem_1()
+	{
+		return 0;
+	}
 }
 
