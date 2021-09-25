@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Exercise2">
       <UniqueIdentifier>{c4784f07-0de1-424d-904b-33d370d659b6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Exercise3">
+      <UniqueIdentifier>{e12d5f59-84ef-440e-aad6-ee59457a2d46}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -44,6 +47,9 @@
     </ClCompile>
     <ClCompile Include="Exercise2Hard.cpp">
       <Filter>Source Files\Exercise2</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise3Easy.cpp">
+      <Filter>Source Files\Exercise3</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

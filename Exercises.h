@@ -18,4 +18,8 @@ namespace Exercise2
 	int hard_problem();
 }
 
+namespace Exercise3
+{
+	int easy_problem();
+}
 
