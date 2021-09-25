@@ -155,6 +155,7 @@
     <ClCompile Include="Exercise1Hard.cpp" />
     <ClCompile Include="Exercise1Medium.cpp" />
     <ClCompile Include="Exercise2Easy.cpp" />
+    <ClCompile Include="Exercise2Hard.cpp" />
     <ClCompile Include="Exercise2Medium.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Main.cpp" />
