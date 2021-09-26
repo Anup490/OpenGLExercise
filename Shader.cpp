@@ -33,6 +33,11 @@ void ShaderProgram::deactivate()
 	glUseProgram(0);
 }
 
+void ShaderProgram::set_int_uniform(const char* name, int value)
+{
+	glUniform1i(glGetUniformLocation(id, name), value);
+}
+
 std::string ShaderProgram::extract_shader(const char* path)
 {
 	std::string shader_source = "";
