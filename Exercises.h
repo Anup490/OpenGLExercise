@@ -23,3 +23,7 @@ namespace Exercise3
 	int easy_problem();
 }
 
+namespace Exercise5
+{
+	int easy_problem_1();
+}

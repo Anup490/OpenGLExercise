@@ -13,20 +13,35 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Exercise1">
-      <UniqueIdentifier>{461887ee-cd28-4cc3-a84b-b517088c804d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Exercise2">
-      <UniqueIdentifier>{c4784f07-0de1-424d-904b-33d370d659b6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Exercise3">
-      <UniqueIdentifier>{e12d5f59-84ef-440e-aad6-ee59457a2d46}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Wrappers">
       <UniqueIdentifier>{677afb0c-f457-42be-981a-dfc0953e2384}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Wrappers">
       <UniqueIdentifier>{cca38885-8bf1-457f-ad61-43e85163b0d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise5Shaders">
+      <UniqueIdentifier>{59c685b5-608d-4638-b1bf-d23d7eb2653a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise1CreateWindow">
+      <UniqueIdentifier>{461887ee-cd28-4cc3-a84b-b517088c804d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise2Triangle">
+      <UniqueIdentifier>{c4784f07-0de1-424d-904b-33d370d659b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise3Indices">
+      <UniqueIdentifier>{e12d5f59-84ef-440e-aad6-ee59457a2d46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{ecf40667-a421-4039-b95e-3875a0f86d5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\Exercise5Shaders">
+      <UniqueIdentifier>{ad6d62a9-943f-4862-8daa-d1ca1ca0f5ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\Exercise5Shaders\Exercise5Easy">
+      <UniqueIdentifier>{d38ff242-b99b-4145-9bc7-b55ed5b09817}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem1">
+      <UniqueIdentifier>{b6566022-2b9f-411c-989b-d4cb45361be2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -34,28 +49,28 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Exercise1Easy.cpp">
-      <Filter>Source Files\Exercise1</Filter>
+      <Filter>Source Files\Exercise1CreateWindow</Filter>
     </ClCompile>
     <ClCompile Include="glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Exercise1Medium.cpp">
-      <Filter>Source Files\Exercise1</Filter>
+      <Filter>Source Files\Exercise1CreateWindow</Filter>
     </ClCompile>
     <ClCompile Include="Exercise1Hard.cpp">
-      <Filter>Source Files\Exercise1</Filter>
+      <Filter>Source Files\Exercise1CreateWindow</Filter>
     </ClCompile>
     <ClCompile Include="Exercise2Easy.cpp">
-      <Filter>Source Files\Exercise2</Filter>
+      <Filter>Source Files\Exercise2Triangle</Filter>
     </ClCompile>
     <ClCompile Include="Exercise2Medium.cpp">
-      <Filter>Source Files\Exercise2</Filter>
+      <Filter>Source Files\Exercise2Triangle</Filter>
     </ClCompile>
     <ClCompile Include="Exercise2Hard.cpp">
-      <Filter>Source Files\Exercise2</Filter>
+      <Filter>Source Files\Exercise2Triangle</Filter>
     </ClCompile>
     <ClCompile Include="Exercise3Easy.cpp">
-      <Filter>Source Files\Exercise3</Filter>
+      <Filter>Source Files\Exercise3Indices</Filter>
     </ClCompile>
     <ClCompile Include="Shader.cpp">
       <Filter>Source Files\Wrappers</Filter>
@@ -71,6 +86,9 @@
     </ClCompile>
     <ClCompile Include="VertexArrayObject.cpp">
       <Filter>Source Files\Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercise5Easy.cpp">
+      <Filter>Source Files\Exercise5Shaders</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -95,5 +113,16 @@
     <ClInclude Include="VertexArrayObject.h">
       <Filter>Header Files\Wrappers</Filter>
     </ClInclude>
+    <ClInclude Include="Wrappers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader.vert">
+      <Filter>Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem1</Filter>
+    </None>
+    <None Include="shader.frag">
+      <Filter>Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem1</Filter>
+    </None>
   </ItemGroup>
 </Project>
