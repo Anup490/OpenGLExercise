@@ -178,8 +178,10 @@
     <ClInclude Include="Wrappers.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shader.frag" />
-    <None Include="shader.vert" />
+    <None Include="problem1.frag" />
+    <None Include="problem1.vert" />
+    <None Include="problem2.frag" />
+    <None Include="problem2.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

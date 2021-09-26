@@ -43,6 +43,9 @@
     <Filter Include="Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem1">
       <UniqueIdentifier>{b6566022-2b9f-411c-989b-d4cb45361be2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem2">
+      <UniqueIdentifier>{886251d8-a045-44d3-b964-29ffe93594d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -118,11 +121,17 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shader.vert">
+    <None Include="problem1.frag">
       <Filter>Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem1</Filter>
     </None>
-    <None Include="shader.frag">
+    <None Include="problem1.vert">
       <Filter>Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem1</Filter>
+    </None>
+    <None Include="problem2.vert">
+      <Filter>Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem2</Filter>
+    </None>
+    <None Include="problem2.frag">
+      <Filter>Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem2</Filter>
     </None>
   </ItemGroup>
 </Project>
