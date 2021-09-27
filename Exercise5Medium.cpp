@@ -15,7 +15,7 @@ namespace Exercise5
 			 0.0f, sqrt(0.15f), 0.0f,
 		};
 
-		const char* window_title = "OpenGLExercise5EasyProblem 2";
+		const char* window_title = "OpenGLExercise5MediumProblem";
 		Window window(window_title);
 		VertexBufferObject VBO(triangle_vertices, sizeof(triangle_vertices));
 		ShaderProgram shader("exercise5mediumproblem1.vert", "exercise5mediumproblem1.frag");

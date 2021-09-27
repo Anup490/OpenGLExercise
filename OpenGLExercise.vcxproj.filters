@@ -105,6 +105,9 @@
     <ClCompile Include="Exercise5Medium.cpp">
       <Filter>Source Files\Exercise5Shaders</Filter>
     </ClCompile>
+    <ClCompile Include="Exercise5Hard.cpp">
+      <Filter>Source Files\Exercise5Shaders</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers.h">
