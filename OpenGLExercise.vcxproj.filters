@@ -96,6 +96,9 @@
     <ClCompile Include="Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Exercise5Medium.cpp">
+      <Filter>Source Files\Exercise5Shaders</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers.h">
@@ -127,16 +130,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="problem1.frag">
+    <None Include="easyproblem1.vert">
       <Filter>Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem1</Filter>
     </None>
-    <None Include="problem1.vert">
+    <None Include="easyproblem1.frag">
       <Filter>Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem1</Filter>
     </None>
-    <None Include="problem2.vert">
+    <None Include="easyproblem2.vert">
       <Filter>Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem2</Filter>
     </None>
-    <None Include="problem2.frag">
+    <None Include="easyproblem2.frag">
       <Filter>Resource Files\Shaders\Exercise5Shaders\Exercise5Easy\Problem2</Filter>
     </None>
   </ItemGroup>

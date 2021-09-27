@@ -159,6 +159,7 @@
     <ClCompile Include="Exercise2Hard.cpp" />
     <ClCompile Include="Exercise2Medium.cpp" />
     <ClCompile Include="Exercise3Easy.cpp" />
+    <ClCompile Include="Exercise5Medium.cpp" />
     <ClCompile Include="Exercise5Easy.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Main.cpp" />
@@ -180,10 +181,10 @@
     <ClInclude Include="Wrappers.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="problem1.frag" />
-    <None Include="problem1.vert" />
-    <None Include="problem2.frag" />
-    <None Include="problem2.vert" />
+    <None Include="easyproblem1.frag" />
+    <None Include="easyproblem1.vert" />
+    <None Include="easyproblem2.frag" />
+    <None Include="easyproblem2.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,7 +13,7 @@ namespace Exercise5
 		const char* window_title = "OpenGLExercise5EasyProblem 1";
 		Window window(window_title);
 		VertexBufferObject VBO(triangle_vertices, sizeof(triangle_vertices));
-		ShaderProgram shader("problem1.vert","problem1.frag");
+		ShaderProgram shader("easyproblem1.vert","easyproblem1.frag");
 		VertexArrayObject VAO;
 		VAO.link_VBO_data(VBO, 0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (void*)0);
 		while (window.should_stay())
@@ -38,7 +38,7 @@ namespace Exercise5
 		const char* window_title = "OpenGLExercise5EasyProblem 2";
 		Window window(window_title);
 		VertexBufferObject VBO(triangle_vertices, sizeof(triangle_vertices));
-		ShaderProgram shader("problem2.vert", "problem2.frag");
+		ShaderProgram shader("easyproblem2.vert", "easyproblem2.frag");
 		VertexArrayObject VAO;
 		VAO.link_VBO_data(VBO, 0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (void*)0);
 		while (window.should_stay())
