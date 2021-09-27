@@ -4,6 +4,6 @@ out float scale_value;
 uniform float scale;
 void main()
 {
-	gl_Position = vec4(aPos.x * scale, aPos.y * scale, aPos.z * scale, 1.0f);
+	gl_Position = vec4(aPos * scale, 1.0f);
 	scale_value = scale;
 }
