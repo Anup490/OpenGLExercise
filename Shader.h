@@ -16,5 +16,5 @@ public:
 	~ShaderProgram();
 	void activate();
 	void deactivate();
-	void set_int_uniform(const char* name, int value);
+	void set_float_uniform(const char* name, float value);
 };

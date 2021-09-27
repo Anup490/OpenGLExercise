@@ -185,6 +185,8 @@
     <None Include="exercise5easyproblem1.vert" />
     <None Include="exercise5easyproblem2.frag" />
     <None Include="exercise5easyproblem2.vert" />
+    <None Include="exercise5mediumproblem1.frag" />
+    <None Include="exercise5mediumproblem1.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

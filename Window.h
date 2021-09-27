@@ -11,4 +11,5 @@ public:
 	~Window();
 	bool should_stay();
 	void run_swapbuffer_eventpoller();
+	double get_current_time();
 };

@@ -1,3 +1,3 @@
 #pragma once
 
-void clamp_within_zero_one(int min, int value, int max);
+float clamp_within_one_two(float min, float value, float max);

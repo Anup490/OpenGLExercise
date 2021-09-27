@@ -24,6 +24,11 @@ void Window::run_swapbuffer_eventpoller()
 	glfwPollEvents();
 }
 
+double Window::get_current_time()
+{
+	return glfwGetTime();
+}
+
 void Window::initialize_glfw(const char* title)
 {
 	glfwInit();

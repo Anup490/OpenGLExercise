@@ -33,9 +33,10 @@ void ShaderProgram::deactivate()
 	glUseProgram(0);
 }
 
-void ShaderProgram::set_int_uniform(const char* name, int value)
+void ShaderProgram::set_float_uniform(const char* name, float value)
 {
-	glUniform1i(glGetUniformLocation(id, name), value);
+	activate();
+	glUniform1f(glGetUniformLocation(id, name), value);
 }
 
 std::string ShaderProgram::extract_shader(const char* path)
