@@ -186,6 +186,8 @@
     <None Include="exercise5easyproblem1.vert" />
     <None Include="exercise5easyproblem2.frag" />
     <None Include="exercise5easyproblem2.vert" />
+    <None Include="exercise5hardproblem1.frag" />
+    <None Include="exercise5hardproblem1.vert" />
     <None Include="exercise5mediumproblem1.frag" />
     <None Include="exercise5mediumproblem1.vert" />
   </ItemGroup>

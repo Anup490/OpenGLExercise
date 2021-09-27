@@ -2,7 +2,7 @@
 
 namespace Exercise5
 {
-	static int max_scale_value = 10;
+	static int scale_value = 10;
 	bool should_decrease = true;
 	static void modify_scale_value();
 
@@ -27,7 +27,7 @@ namespace Exercise5
 			glClearColor(0.96f, 0.87f, 0.58f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 			shader.activate();
-			shader.set_float_uniform("scale", clamp_within_one_two(0.0f, max_scale_value, 10.0f));
+			shader.set_float_uniform("scale", clamp_within_one_two(0.0f, scale_value, 10.0f));
 			double crnt_time = window.get_current_time();
 			if ((crnt_time - prev_time) > 1)
 			{
@@ -44,26 +44,26 @@ namespace Exercise5
 	{
 		if (should_decrease)
 		{
-			if (max_scale_value == 0)
+			if (scale_value == 0)
 			{
-				max_scale_value++;
+				scale_value++;
 				should_decrease = false;
 			}
 			else
 			{
-				max_scale_value--;
+				scale_value--;
 			}
 		}
 		else
 		{
-			if (max_scale_value == 10)
+			if (scale_value == 10)
 			{
-				max_scale_value--;
+				scale_value--;
 				should_decrease = true;
 			}
 			else
 			{
-				max_scale_value++;
+				scale_value++;
 			}
 		}
 	}
