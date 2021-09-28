@@ -58,6 +58,21 @@
     <Filter Include="Resource Files\Shaders\Exercise5Shaders\Exercise5Hard\Problem1">
       <UniqueIdentifier>{48e0dbfd-a159-4bfe-a407-cf39805f5f00}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Textures">
+      <UniqueIdentifier>{3f5e457f-12f5-4221-be0f-9880c01c3c20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exercise6Textures">
+      <UniqueIdentifier>{d1a80900-7040-427e-bc04-e93436aa73f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\Exercise6Textures">
+      <UniqueIdentifier>{fce18981-3e92-4328-b85c-593f6728d5aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\Exercise6Textures\Exercise6Easy">
+      <UniqueIdentifier>{718b6be2-c0a1-432d-81f7-b1d0e5d0f190}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\Exercise6Textures\Exercise6Easy\Problem1">
+      <UniqueIdentifier>{fcbfd454-b623-4037-8f14-709d39731314}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -114,6 +129,9 @@
     <ClCompile Include="Exercise5Hard.cpp">
       <Filter>Source Files\Exercise5Shaders</Filter>
     </ClCompile>
+    <ClCompile Include="Exercise6Easy.cpp">
+      <Filter>Source Files\Exercise6Textures</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers.h">
@@ -169,5 +187,16 @@
     <None Include="exercise5hardproblem1.frag">
       <Filter>Resource Files\Shaders\Exercise5Shaders\Exercise5Hard\Problem1</Filter>
     </None>
+    <None Include="exercise6easyproblem1.vert">
+      <Filter>Resource Files\Shaders\Exercise6Textures\Exercise6Easy\Problem1</Filter>
+    </None>
+    <None Include="exercise6easyproblem1.frag">
+      <Filter>Resource Files\Shaders\Exercise6Textures\Exercise6Easy\Problem1</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="happy.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

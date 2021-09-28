@@ -30,3 +30,8 @@ namespace Exercise5
 	int medium_problem();
 	int hard_problem();
 }
+
+namespace Exercise6
+{
+	int easy_problem_1();
+}

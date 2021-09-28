@@ -39,6 +39,11 @@ void ShaderProgram::set_float_uniform(const char* name, float value)
 	glUniform1f(glGetUniformLocation(id, name), value);
 }
 
+GLuint ShaderProgram::get_id()
+{
+	return id;
+}
+
 std::string ShaderProgram::extract_shader(const char* path)
 {
 	std::string shader_source = "";

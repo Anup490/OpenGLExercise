@@ -17,4 +17,5 @@ public:
 	void activate();
 	void deactivate();
 	void set_float_uniform(const char* name, float value);
+	GLuint get_id();
 };
