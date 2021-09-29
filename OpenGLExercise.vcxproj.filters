@@ -135,6 +135,9 @@
     <ClCompile Include="Exercise6Easy.cpp">
       <Filter>Source Files\Exercise6Textures</Filter>
     </ClCompile>
+    <ClCompile Include="stb_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers.h">
