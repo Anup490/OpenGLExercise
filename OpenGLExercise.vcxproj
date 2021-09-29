@@ -193,6 +193,8 @@
     <None Include="exercise5mediumproblem1.vert" />
     <None Include="exercise6easyproblem1.frag" />
     <None Include="exercise6easyproblem1.vert" />
+    <None Include="exercise6easyproblem2.frag" />
+    <None Include="exercise6easyproblem2.vert" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="happy.png" />

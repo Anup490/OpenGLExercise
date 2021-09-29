@@ -34,4 +34,5 @@ namespace Exercise5
 namespace Exercise6
 {
 	int easy_problem_1();
+	int easy_problem_2();
 }

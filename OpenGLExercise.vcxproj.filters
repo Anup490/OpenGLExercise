@@ -73,6 +73,9 @@
     <Filter Include="Resource Files\Shaders\Exercise6Textures\Exercise6Easy\Problem1">
       <UniqueIdentifier>{fcbfd454-b623-4037-8f14-709d39731314}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders\Exercise6Textures\Exercise6Easy\Problem2">
+      <UniqueIdentifier>{014f07e1-ac8d-447a-9fe9-c76a391701d3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -192,6 +195,12 @@
     </None>
     <None Include="exercise6easyproblem1.frag">
       <Filter>Resource Files\Shaders\Exercise6Textures\Exercise6Easy\Problem1</Filter>
+    </None>
+    <None Include="exercise6easyproblem2.vert">
+      <Filter>Resource Files\Shaders\Exercise6Textures\Exercise6Easy\Problem2</Filter>
+    </None>
+    <None Include="exercise6easyproblem2.frag">
+      <Filter>Resource Files\Shaders\Exercise6Textures\Exercise6Easy\Problem2</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
