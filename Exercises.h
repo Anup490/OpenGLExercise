@@ -37,4 +37,5 @@ namespace Exercise6
 	int easy_problem_2();
 	int medium_problem_1();
 	int medium_problem_2();
+	int hard_problem();
 }

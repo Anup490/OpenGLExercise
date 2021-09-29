@@ -163,6 +163,7 @@
     <ClCompile Include="Exercise5Medium.cpp" />
     <ClCompile Include="Exercise5Easy.cpp" />
     <ClCompile Include="Exercise6Easy.cpp" />
+    <ClCompile Include="Exercise6Hard.cpp" />
     <ClCompile Include="Exercise6Medium.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Main.cpp" />
@@ -197,6 +198,8 @@
     <None Include="exercise6easyproblem1.vert" />
     <None Include="exercise6easyproblem2.frag" />
     <None Include="exercise6easyproblem2.vert" />
+    <None Include="exercise6hardproblem1.frag" />
+    <None Include="exercise6hardproblem1.vert" />
     <None Include="exercise6mediumproblem1.frag" />
     <None Include="exercise6mediumproblem1.vert" />
     <None Include="exercise6mediumproblem2.frag" />
