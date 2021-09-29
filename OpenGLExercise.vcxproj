@@ -199,6 +199,8 @@
     <None Include="exercise6easyproblem2.vert" />
     <None Include="exercise6mediumproblem1.frag" />
     <None Include="exercise6mediumproblem1.vert" />
+    <None Include="exercise6mediumproblem2.frag" />
+    <None Include="exercise6mediumproblem2.vert" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="happy.png" />
