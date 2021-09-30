@@ -3,3 +3,4 @@
 #include "Window.h"
 #include "VertexArrayObject.h"
 #include "Utils.h"
+#include "Texture.h"
