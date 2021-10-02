@@ -43,4 +43,5 @@ namespace Exercise6
 namespace ExerciseTransformations
 {
 	int problem1();
+	int problem2();
 }

@@ -2,5 +2,5 @@
 
 int main()
 {
-	return ExerciseTransformations::problem1();
+	return ExerciseTransformations::problem2();
 }
