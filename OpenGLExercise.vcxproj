@@ -165,6 +165,7 @@
     <ClCompile Include="Exercise6Easy.cpp" />
     <ClCompile Include="Exercise6Hard.cpp" />
     <ClCompile Include="Exercise6Medium.cpp" />
+    <ClCompile Include="ExerciseTransformations.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Shader.cpp" />
@@ -206,8 +207,11 @@
     <None Include="exercise6mediumproblem1.vert" />
     <None Include="exercise6mediumproblem2.frag" />
     <None Include="exercise6mediumproblem2.vert" />
+    <None Include="exercisetransformations1.frag" />
+    <None Include="exercisetransformations1.vert" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="container.png" />
     <Image Include="happy.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

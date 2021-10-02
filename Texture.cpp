@@ -1,9 +1,19 @@
 #include "Texture.h"
 #include "stb/stb_image.h"
 
-Texture::Texture(char const* path, GLint texture_wrap_s, GLint texture_wrap_t, GLint min_filter, GLint mag_filter)
+Texture::Texture
+(
+	char const* path, 
+	GLenum texture_container, 
+	GLint texture_wrap_s, 
+	GLint texture_wrap_t,
+	GLint min_filter, 
+	GLint mag_filter,
+	GLenum img_color_channels
+)
 {
 	glGenTextures(1, &id);
+	glActiveTexture(texture_container);
 	glBindTexture(GL_TEXTURE_2D, id);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, texture_wrap_s);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, texture_wrap_t);
@@ -15,23 +25,25 @@ Texture::Texture(char const* path, GLint texture_wrap_s, GLint texture_wrap_t, G
 	unsigned char* data = stbi_load(path, &width, &height, &color_channels, 0);
 	if (data)
 	{
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, img_color_channels, GL_UNSIGNED_BYTE, data);
 		stbi_image_free(data);
 	}
+	Texture::texture_container = texture_container;
 }
 
 Texture::~Texture()
 {
-	unbind();
+	deactivate();
 	glDeleteTextures(1, &id);
 }
 
-void Texture::bind()
+void Texture::activate()
 {
+	glActiveTexture(texture_container);
 	glBindTexture(GL_TEXTURE_2D, id);
 }
 
-void Texture::unbind()
+void Texture::deactivate()
 {
 	glBindTexture(GL_TEXTURE_2D, 0);
 }

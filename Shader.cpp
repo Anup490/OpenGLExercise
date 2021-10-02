@@ -39,6 +39,18 @@ void ShaderProgram::set_float_uniform(const char* name, float value)
 	glUniform1f(glGetUniformLocation(id, name), value);
 }
 
+void ShaderProgram::set_int_uniform(const char* name, int value)
+{
+	activate();
+	glUniform1i(glGetUniformLocation(id, name), value);
+}
+
+void ShaderProgram::set_mat4_uniform(const char* name, glm::mat4& value)
+{
+	activate();
+	glUniformMatrix4fv(glGetUniformLocation(id, name), 1, GL_FALSE, glm::value_ptr(value));
+}
+
 GLuint ShaderProgram::get_id()
 {
 	return id;

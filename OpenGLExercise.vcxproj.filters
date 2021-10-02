@@ -91,6 +91,15 @@
     <Filter Include="Resource Files\Shaders\Exercise6Textures\Exercise6Hard\Problem1">
       <UniqueIdentifier>{9268ffa8-67a9-4d1e-9e62-c28d54983278}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseTransformations">
+      <UniqueIdentifier>{c2bc3840-7b66-4895-b146-1d03e751a3c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseTransformations\Problem1">
+      <UniqueIdentifier>{5e1256ba-2cba-49b8-8274-9e0f61ca1777}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ExerciseTransformations">
+      <UniqueIdentifier>{a70af92c-ec59-4e0f-a597-d8f53c571d92}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -161,6 +170,9 @@
     </ClCompile>
     <ClCompile Include="Texture.cpp">
       <Filter>Source Files\Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="ExerciseTransformations.cpp">
+      <Filter>Source Files\ExerciseTransformations</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -250,9 +262,18 @@
     <None Include="exercise6hardproblem1.frag">
       <Filter>Resource Files\Shaders\Exercise6Textures\Exercise6Hard\Problem1</Filter>
     </None>
+    <None Include="exercisetransformations1.frag">
+      <Filter>Resource Files\Shaders\ExerciseTransformations\Problem1</Filter>
+    </None>
+    <None Include="exercisetransformations1.vert">
+      <Filter>Resource Files\Shaders\ExerciseTransformations\Problem1</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="happy.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="container.png">
       <Filter>Resource Files\Textures</Filter>
     </Image>
   </ItemGroup>

@@ -39,3 +39,8 @@ namespace Exercise6
 	int medium_problem_2();
 	int hard_problem();
 }
+
+namespace ExerciseTransformations
+{
+	int problem1();
+}

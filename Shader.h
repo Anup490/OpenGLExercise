@@ -16,5 +16,7 @@ public:
 	void activate();
 	void deactivate();
 	void set_float_uniform(const char* name, float value);
+	void set_int_uniform(const char* name, int value);
+	void set_mat4_uniform(const char* name, glm::mat4& value);
 	GLuint get_id();
 };
