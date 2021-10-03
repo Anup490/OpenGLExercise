@@ -1,6 +1,7 @@
 #include "Exercises.h"
+#include <iostream>
 
 int main()
 {
-	return ExerciseCoordinateSystems::problem2();
+	return ExerciseCoordinateSystems::problem3();
 }
