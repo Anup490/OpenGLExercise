@@ -52,3 +52,8 @@ namespace ExerciseCoordinateSystems
 	int problem2();
 	int problem3();
 }
+
+namespace ExerciseCamera
+{
+	int problem1();
+}

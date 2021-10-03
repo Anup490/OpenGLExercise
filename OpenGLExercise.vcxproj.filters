@@ -103,6 +103,12 @@
     <Filter Include="Source Files\ExerciseCoordinateSystems">
       <UniqueIdentifier>{042c45df-9da9-4952-b5f6-5448c23e566a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseCamera">
+      <UniqueIdentifier>{53e8747e-bd5b-4fcf-853e-b018f897e4b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ExerciseCamera">
+      <UniqueIdentifier>{a17928b7-2a8b-4ed3-af70-2cfdc0404c09}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -179,6 +185,9 @@
     </ClCompile>
     <ClCompile Include="ExerciseCoordinateSystems.cpp">
       <Filter>Source Files\ExerciseCoordinateSystems</Filter>
+    </ClCompile>
+    <ClCompile Include="ExerciseCamera.cpp">
+      <Filter>Source Files\ExerciseCamera</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -279,6 +288,12 @@
     </None>
     <None Include="exercisecoordinatesystems.frag">
       <Filter>Resource Files\Shaders\ExerciseCoordinateSystems</Filter>
+    </None>
+    <None Include="exercisecamera.vert">
+      <Filter>Resource Files\Shaders\ExerciseCamera</Filter>
+    </None>
+    <None Include="exercisecamera.frag">
+      <Filter>Resource Files\Shaders\ExerciseCamera</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

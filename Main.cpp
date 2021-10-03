@@ -3,5 +3,5 @@
 
 int main()
 {
-	return ExerciseCoordinateSystems::problem3();
+	return ExerciseCamera::problem1();
 }

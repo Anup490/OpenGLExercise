@@ -29,6 +29,18 @@ double Window::get_current_time()
 	return glfwGetTime();
 }
 
+bool Window::has_pressed(int key)
+{
+	return glfwGetKey(window, key) == GLFW_PRESS;
+}
+
+void Window::activate_mouse_input(function mouse_callback, function scroll_callback)
+{
+	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+	glfwSetCursorPosCallback(window, mouse_callback);
+	glfwSetScrollCallback(window, scroll_callback);
+}
+
 void Window::initialize_glfw(const char* title)
 {
 	glfwInit();

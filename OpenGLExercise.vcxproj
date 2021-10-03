@@ -165,6 +165,7 @@
     <ClCompile Include="Exercise6Easy.cpp" />
     <ClCompile Include="Exercise6Hard.cpp" />
     <ClCompile Include="Exercise6Medium.cpp" />
+    <ClCompile Include="ExerciseCamera.cpp" />
     <ClCompile Include="ExerciseCoordinateSystems.cpp" />
     <ClCompile Include="ExerciseTransformations.cpp" />
     <ClCompile Include="glad.c" />
@@ -208,6 +209,8 @@
     <None Include="exercise6mediumproblem1.vert" />
     <None Include="exercise6mediumproblem2.frag" />
     <None Include="exercise6mediumproblem2.vert" />
+    <None Include="exercisecamera.frag" />
+    <None Include="exercisecamera.vert" />
     <None Include="exercisecoordinatesystems.frag" />
     <None Include="exercisecoordinatesystems.vert" />
     <None Include="exercisetransformations.frag" />
