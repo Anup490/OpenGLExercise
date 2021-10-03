@@ -49,4 +49,5 @@ namespace ExerciseTransformations
 namespace ExerciseCoordinateSystems
 {
 	int problem1();
+	int problem2();
 }

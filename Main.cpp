@@ -2,5 +2,5 @@
 
 int main()
 {
-	return ExerciseCoordinateSystems::problem1();
+	return ExerciseCoordinateSystems::problem2();
 }
