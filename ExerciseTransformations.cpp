@@ -82,7 +82,7 @@ namespace ExerciseTransformations
 			2, 3, 1
 		};
 
-		const char* window_title = "OpenGLExerciseTransformations 1";
+		const char* window_title = "OpenGLExerciseTransformations 2";
 		Window window(window_title);
 		VertexBufferObject VBO(square_vertices, sizeof(square_vertices));
 		ShaderProgram shader("exercisetransformations.vert", "exercisetransformations.frag");

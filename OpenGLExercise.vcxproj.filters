@@ -97,6 +97,12 @@
     <Filter Include="Source Files\ExerciseTransformations">
       <UniqueIdentifier>{a70af92c-ec59-4e0f-a597-d8f53c571d92}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseCoordinateSystems">
+      <UniqueIdentifier>{552550fa-177d-44be-8a49-9ecd621c827e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ExerciseCoordinateSystems">
+      <UniqueIdentifier>{042c45df-9da9-4952-b5f6-5448c23e566a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -170,6 +176,9 @@
     </ClCompile>
     <ClCompile Include="ExerciseTransformations.cpp">
       <Filter>Source Files\ExerciseTransformations</Filter>
+    </ClCompile>
+    <ClCompile Include="ExerciseCoordinateSystems.cpp">
+      <Filter>Source Files\ExerciseCoordinateSystems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -264,6 +273,12 @@
     </None>
     <None Include="exercisetransformations.vert">
       <Filter>Resource Files\Shaders\ExerciseTransformations</Filter>
+    </None>
+    <None Include="exercisecoordinatesystems.vert">
+      <Filter>Resource Files\Shaders\ExerciseCoordinateSystems</Filter>
+    </None>
+    <None Include="exercisecoordinatesystems.frag">
+      <Filter>Resource Files\Shaders\ExerciseCoordinateSystems</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
