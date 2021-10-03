@@ -156,6 +156,8 @@ namespace ExerciseCamera
 			camera_pos -= glm::normalize(glm::cross(camera_front, camera_up)) * camera_speed;
 		if (window.has_pressed(GLFW_KEY_D))
 			camera_pos += glm::normalize(glm::cross(camera_front, camera_up)) * camera_speed;
+
+		camera_pos.y = 0.0f;
 	}
 
 	void mouse_callback(GLFWwindow* window, double xpos, double ypos)
