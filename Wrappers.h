@@ -4,3 +4,4 @@
 #include "VertexArrayObject.h"
 #include "Utils.h"
 #include "Texture.h"
+#include "Camera.h"

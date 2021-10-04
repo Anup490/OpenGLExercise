@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="ElementBufferObject.cpp" />
     <ClCompile Include="Exercise1Easy.cpp" />
     <ClCompile Include="Exercise1Hard.cpp" />
@@ -179,6 +180,7 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="ElementBufferObject.h" />
     <ClInclude Include="Exercises.h" />
     <ClInclude Include="Headers.h" />

@@ -12,7 +12,7 @@ namespace ExerciseCamera
 
 	static void update_camera_vectors_prob_1(Window& window, glm::vec3& camera_pos, glm::vec3& camera_front, glm::vec3& camera_up, float& current_frame);
 	static void update_camera_vectors_prob_2(Window& window, glm::vec3& camera_pos, glm::vec3& camera_front, glm::vec3& camera_up, float& current_frame);
-	static glm::mat4 look_at(glm::vec3& position, glm::vec3& target, glm::vec3& up);
+	static glm::mat4 look_at(glm::vec3& position, glm::vec3 target, glm::vec3& up);
 	static void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 	static void scroll_callback(GLFWwindow* window, double xpos, double ypos);
 
@@ -259,7 +259,7 @@ namespace ExerciseCamera
 			last_frame = current_frame;
 
 			update_camera_vectors_prob_2(window, camera_pos, camera_front, camera_up, delta_time);
-			glm::mat4 view = look_at(camera_pos, camera_target, camera_up);
+			glm::mat4 view = look_at(camera_pos, camera_pos + camera_front, camera_up);
 			shader.set_mat4_uniform("view", view);
 
 			for (unsigned int i = 0; i < 10; i++)
@@ -306,7 +306,7 @@ namespace ExerciseCamera
 			camera_pos += glm::normalize(glm::cross(camera_front, camera_up)) * camera_speed;
 	}
 
-	glm::mat4 look_at(glm::vec3& position, glm::vec3& target, glm::vec3& up)
+	glm::mat4 look_at(glm::vec3& position, glm::vec3 target, glm::vec3& up)
 	{
 		glm::vec3 zaxis = glm::normalize(position - target);
 		glm::vec3 xaxis = glm::normalize(glm::cross(glm::normalize(up), zaxis));
