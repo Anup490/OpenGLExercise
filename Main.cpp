@@ -3,5 +3,5 @@
 
 int main()
 {
-	return ExerciseCamera::problem1();
+	return ExerciseCamera::problem2();
 }
