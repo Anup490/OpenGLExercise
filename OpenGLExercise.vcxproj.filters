@@ -124,6 +124,9 @@
     <Filter Include="Resource Files\Shaders\ExerciseBasicLighting\Problem3">
       <UniqueIdentifier>{13de6700-0f47-4016-b28c-0ace7110a6c7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseBasicLighting\Problem4">
+      <UniqueIdentifier>{7e477a45-5f0c-4981-9975-3e107c5e93ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -342,6 +345,12 @@
     </None>
     <None Include="exercisebasiclighting3.frag">
       <Filter>Resource Files\Shaders\ExerciseBasicLighting\Problem3</Filter>
+    </None>
+    <None Include="exercisebasiclighting4.vert">
+      <Filter>Resource Files\Shaders\ExerciseBasicLighting\Problem4</Filter>
+    </None>
+    <None Include="exercisebasiclighting4.frag">
+      <Filter>Resource Files\Shaders\ExerciseBasicLighting\Problem4</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
