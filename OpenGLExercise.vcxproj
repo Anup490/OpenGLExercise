@@ -215,6 +215,8 @@
     <None Include="exercisebasiclighting1.vert" />
     <None Include="exercisebasiclighting2.frag" />
     <None Include="exercisebasiclighting2.vert" />
+    <None Include="exercisebasiclighting3.frag" />
+    <None Include="exercisebasiclighting3.vert" />
     <None Include="exercisecamera.frag" />
     <None Include="exercisecamera.vert" />
     <None Include="exercisecoordinatesystems.frag" />
