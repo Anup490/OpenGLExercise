@@ -224,8 +224,8 @@
     <None Include="exercisecamera.vert" />
     <None Include="exercisecoordinatesystems.frag" />
     <None Include="exercisecoordinatesystems.vert" />
-    <None Include="exercisematerials1.frag" />
-    <None Include="exercisematerials1.vert" />
+    <None Include="exercisematerials.frag" />
+    <None Include="exercisematerials.vert" />
     <None Include="exercisetransformations.frag" />
     <None Include="exercisetransformations.vert" />
     <None Include="light.frag" />
