@@ -58,3 +58,8 @@ namespace ExerciseCamera
 	int problem1();
 	int problem2();
 }
+
+namespace ExerciseBasicLighting
+{
+	int problem1();
+}

@@ -51,6 +51,12 @@ void ShaderProgram::set_mat4_uniform(const char* name, glm::mat4 value)
 	glUniformMatrix4fv(glGetUniformLocation(id, name), 1, GL_FALSE, glm::value_ptr(value));
 }
 
+void ShaderProgram::set_vec3_uniform(const char* name, glm::vec3 value)
+{
+	activate();
+	glUniform3fv(glGetUniformLocation(id, name), 1, glm::value_ptr(value));
+}
+
 GLuint ShaderProgram::get_id()
 {
 	return id;
