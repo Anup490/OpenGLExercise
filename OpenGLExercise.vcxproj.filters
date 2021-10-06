@@ -115,6 +115,12 @@
     <Filter Include="Source Files\ExerciseBasicLighting">
       <UniqueIdentifier>{7e742751-ceac-447b-ad89-c596e5fb4520}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseBasicLighting\Problem1">
+      <UniqueIdentifier>{3b2b21ee-baa1-4a17-bdc3-cdc306936ec9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseBasicLighting\Problem2">
+      <UniqueIdentifier>{0f3bc1c2-154a-446f-a06d-9134798546e0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -310,16 +316,22 @@
     <None Include="exercisecamera.frag">
       <Filter>Resource Files\Shaders\ExerciseCamera</Filter>
     </None>
-    <None Include="light.frag">
-      <Filter>Resource Files\Shaders</Filter>
-    </None>
-    <None Include="light.vert">
-      <Filter>Resource Files\Shaders</Filter>
+    <None Include="exercisebasiclighting1.frag">
+      <Filter>Resource Files\Shaders\ExerciseBasicLighting\Problem1</Filter>
     </None>
     <None Include="exercisebasiclighting1.vert">
+      <Filter>Resource Files\Shaders\ExerciseBasicLighting\Problem1</Filter>
+    </None>
+    <None Include="exercisebasiclighting2.vert">
+      <Filter>Resource Files\Shaders\ExerciseBasicLighting\Problem2</Filter>
+    </None>
+    <None Include="exercisebasiclighting2.frag">
+      <Filter>Resource Files\Shaders\ExerciseBasicLighting\Problem2</Filter>
+    </None>
+    <None Include="light.frag">
       <Filter>Resource Files\Shaders\ExerciseBasicLighting</Filter>
     </None>
-    <None Include="exercisebasiclighting1.frag">
+    <None Include="light.vert">
       <Filter>Resource Files\Shaders\ExerciseBasicLighting</Filter>
     </None>
   </ItemGroup>
