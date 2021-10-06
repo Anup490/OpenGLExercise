@@ -169,6 +169,7 @@
     <ClCompile Include="ExerciseBasicLighting.cpp" />
     <ClCompile Include="ExerciseCamera.cpp" />
     <ClCompile Include="ExerciseCoordinateSystems.cpp" />
+    <ClCompile Include="ExerciseMaterials.cpp" />
     <ClCompile Include="ExerciseTransformations.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Main.cpp" />
@@ -223,11 +224,15 @@
     <None Include="exercisecamera.vert" />
     <None Include="exercisecoordinatesystems.frag" />
     <None Include="exercisecoordinatesystems.vert" />
+    <None Include="exercisematerials1.frag" />
+    <None Include="exercisematerials1.vert" />
     <None Include="exercisetransformations.frag" />
     <None Include="exercisetransformations.vert" />
     <None Include="light.frag" />
     <None Include="light.vert" />
     <None Include="exercisebasiclighting1.frag" />
+    <None Include="materiallight.frag" />
+    <None Include="materiallight.vert" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="container.png" />

@@ -127,6 +127,15 @@
     <Filter Include="Resource Files\Shaders\ExerciseBasicLighting\Problem4">
       <UniqueIdentifier>{7e477a45-5f0c-4981-9975-3e107c5e93ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ExerciseMaterials">
+      <UniqueIdentifier>{de5c1505-fc5f-4eea-acc6-376c99ba2ac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseMaterials">
+      <UniqueIdentifier>{f7cc45bc-6317-4a06-9fe3-59f2b4b6da0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseMaterials\Problem1">
+      <UniqueIdentifier>{2c640033-0cb4-433b-94bb-f3c15b94ccc4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -212,6 +221,9 @@
     </ClCompile>
     <ClCompile Include="ExerciseBasicLighting.cpp">
       <Filter>Source Files\ExerciseBasicLighting</Filter>
+    </ClCompile>
+    <ClCompile Include="ExerciseMaterials.cpp">
+      <Filter>Source Files\ExerciseMaterials</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -351,6 +363,18 @@
     </None>
     <None Include="exercisebasiclighting4.frag">
       <Filter>Resource Files\Shaders\ExerciseBasicLighting\Problem4</Filter>
+    </None>
+    <None Include="exercisematerials1.frag">
+      <Filter>Resource Files\Shaders\ExerciseMaterials\Problem1</Filter>
+    </None>
+    <None Include="exercisematerials1.vert">
+      <Filter>Resource Files\Shaders\ExerciseMaterials\Problem1</Filter>
+    </None>
+    <None Include="materiallight.vert">
+      <Filter>Resource Files\Shaders\ExerciseMaterials</Filter>
+    </None>
+    <None Include="materiallight.frag">
+      <Filter>Resource Files\Shaders\ExerciseMaterials</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

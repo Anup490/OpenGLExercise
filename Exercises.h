@@ -66,3 +66,8 @@ namespace ExerciseBasicLighting
 	int problem3();
 	int problem4();
 }
+
+namespace ExerciseMaterials
+{
+	int problem1();
+}
