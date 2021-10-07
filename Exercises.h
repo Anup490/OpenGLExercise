@@ -72,3 +72,8 @@ namespace ExerciseMaterials
 	int problem1();
 	int problem2();
 }
+
+namespace ExerciseLightingMaps
+{
+	int problem1();
+}

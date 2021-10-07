@@ -169,6 +169,7 @@
     <ClCompile Include="ExerciseBasicLighting.cpp" />
     <ClCompile Include="ExerciseCamera.cpp" />
     <ClCompile Include="ExerciseCoordinateSystems.cpp" />
+    <ClCompile Include="ExerciseLightingMaps.cpp" />
     <ClCompile Include="ExerciseMaterials.cpp" />
     <ClCompile Include="ExerciseTransformations.cpp" />
     <ClCompile Include="glad.c" />
@@ -224,6 +225,8 @@
     <None Include="exercisecamera.vert" />
     <None Include="exercisecoordinatesystems.frag" />
     <None Include="exercisecoordinatesystems.vert" />
+    <None Include="exerciselightingmaps.frag" />
+    <None Include="exerciselightingmaps.vert" />
     <None Include="exercisematerials.frag" />
     <None Include="exercisematerials.vert" />
     <None Include="exercisetransformations.frag" />
@@ -236,6 +239,8 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="container.png" />
+    <Image Include="containerdiff.png" />
+    <Image Include="containerspec.png" />
     <Image Include="happy.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

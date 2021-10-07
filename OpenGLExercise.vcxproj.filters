@@ -133,6 +133,12 @@
     <Filter Include="Resource Files\Shaders\ExerciseMaterials">
       <UniqueIdentifier>{f7cc45bc-6317-4a06-9fe3-59f2b4b6da0e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseLightingMaps">
+      <UniqueIdentifier>{57709758-c46f-4cee-9fad-d6229137f687}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ExerciseLightingMaps">
+      <UniqueIdentifier>{2d11f075-c124-46f1-8db9-f0f379621f71}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -221,6 +227,9 @@
     </ClCompile>
     <ClCompile Include="ExerciseMaterials.cpp">
       <Filter>Source Files\ExerciseMaterials</Filter>
+    </ClCompile>
+    <ClCompile Include="ExerciseLightingMaps.cpp">
+      <Filter>Source Files\ExerciseLightingMaps</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -373,12 +382,24 @@
     <None Include="exercisematerials.vert">
       <Filter>Resource Files\Shaders\ExerciseMaterials</Filter>
     </None>
+    <None Include="exerciselightingmaps.vert">
+      <Filter>Resource Files\Shaders\ExerciseLightingMaps</Filter>
+    </None>
+    <None Include="exerciselightingmaps.frag">
+      <Filter>Resource Files\Shaders\ExerciseLightingMaps</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="happy.png">
       <Filter>Resource Files\Textures</Filter>
     </Image>
     <Image Include="container.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="containerdiff.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="containerspec.png">
       <Filter>Resource Files\Textures</Filter>
     </Image>
   </ItemGroup>
