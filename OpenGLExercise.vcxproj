@@ -231,6 +231,8 @@
     <None Include="exerciselightingmaps2.vert" />
     <None Include="exerciselightingmaps3.frag" />
     <None Include="exerciselightingmaps3.vert" />
+    <None Include="exerciselightingmaps4.frag" />
+    <None Include="exerciselightingmaps4.vert" />
     <None Include="exercisematerials.frag" />
     <None Include="exercisematerials.vert" />
     <None Include="exercisetransformations.frag" />
@@ -244,6 +246,7 @@
   <ItemGroup>
     <Image Include="container.png" />
     <Image Include="containerdiff.png" />
+    <Image Include="containeremission.png" />
     <Image Include="containerspec.png" />
     <Image Include="containerspeccolor.png" />
     <Image Include="happy.png" />
