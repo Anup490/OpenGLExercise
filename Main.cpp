@@ -2,5 +2,5 @@
 
 int main()
 {
-	return ExerciseLightingMaps::problem2();
+	return ExerciseLightingMaps::problem3();
 }

@@ -145,6 +145,9 @@
     <Filter Include="Resource Files\Shaders\ExerciseLightingMaps\Problem2">
       <UniqueIdentifier>{5b5501fa-0490-40dc-bbbb-c50506b67d9d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseLightingMaps\Problem3">
+      <UniqueIdentifier>{7c79dc29-58d6-40b5-b275-aea589e6c0f6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -400,6 +403,12 @@
     <None Include="exerciselightingmaps2.frag">
       <Filter>Resource Files\Shaders\ExerciseLightingMaps\Problem2</Filter>
     </None>
+    <None Include="exerciselightingmaps3.vert">
+      <Filter>Resource Files\Shaders\ExerciseLightingMaps\Problem3</Filter>
+    </None>
+    <None Include="exerciselightingmaps3.frag">
+      <Filter>Resource Files\Shaders\ExerciseLightingMaps\Problem3</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="happy.png">
@@ -412,6 +421,9 @@
       <Filter>Resource Files\Textures</Filter>
     </Image>
     <Image Include="containerspec.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="containerspeccolor.png">
       <Filter>Resource Files\Textures</Filter>
     </Image>
   </ItemGroup>

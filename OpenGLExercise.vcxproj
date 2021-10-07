@@ -229,6 +229,8 @@
     <None Include="exerciselightingmaps1.vert" />
     <None Include="exerciselightingmaps2.frag" />
     <None Include="exerciselightingmaps2.vert" />
+    <None Include="exerciselightingmaps3.frag" />
+    <None Include="exerciselightingmaps3.vert" />
     <None Include="exercisematerials.frag" />
     <None Include="exercisematerials.vert" />
     <None Include="exercisetransformations.frag" />
@@ -243,6 +245,7 @@
     <Image Include="container.png" />
     <Image Include="containerdiff.png" />
     <Image Include="containerspec.png" />
+    <Image Include="containerspeccolor.png" />
     <Image Include="happy.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
