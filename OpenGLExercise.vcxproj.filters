@@ -139,6 +139,12 @@
     <Filter Include="Source Files\ExerciseLightingMaps">
       <UniqueIdentifier>{2d11f075-c124-46f1-8db9-f0f379621f71}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseLightingMaps\Problem1">
+      <UniqueIdentifier>{b2ce7f7b-1dba-4a96-b1ec-eacc8bde5046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseLightingMaps\Problem2">
+      <UniqueIdentifier>{5b5501fa-0490-40dc-bbbb-c50506b67d9d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -382,11 +388,17 @@
     <None Include="exercisematerials.vert">
       <Filter>Resource Files\Shaders\ExerciseMaterials</Filter>
     </None>
-    <None Include="exerciselightingmaps.vert">
-      <Filter>Resource Files\Shaders\ExerciseLightingMaps</Filter>
+    <None Include="exerciselightingmaps1.frag">
+      <Filter>Resource Files\Shaders\ExerciseLightingMaps\Problem1</Filter>
     </None>
-    <None Include="exerciselightingmaps.frag">
-      <Filter>Resource Files\Shaders\ExerciseLightingMaps</Filter>
+    <None Include="exerciselightingmaps1.vert">
+      <Filter>Resource Files\Shaders\ExerciseLightingMaps\Problem1</Filter>
+    </None>
+    <None Include="exerciselightingmaps2.vert">
+      <Filter>Resource Files\Shaders\ExerciseLightingMaps\Problem2</Filter>
+    </None>
+    <None Include="exerciselightingmaps2.frag">
+      <Filter>Resource Files\Shaders\ExerciseLightingMaps\Problem2</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
