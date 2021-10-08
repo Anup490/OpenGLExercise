@@ -81,6 +81,11 @@ glm::vec3 Camera::get_position()
 	return position;
 }
 
+glm::vec3 Camera::get_front()
+{
+	return front;
+}
+
 void Camera::mouse_callback(GLFWwindow* window, double xpos, double ypos)
 {
 	if (first_mouse)

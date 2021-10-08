@@ -80,3 +80,8 @@ namespace ExerciseLightingMaps
 	int problem3();
 	int problem4();
 }
+
+namespace ExerciseLightCasters
+{
+	int problem1();
+}

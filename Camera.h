@@ -23,4 +23,5 @@ public:
 	void update_vectors();
 	void update_matrices(ShaderProgram& program);
 	glm::vec3 get_position();
+	glm::vec3 get_front();
 };
