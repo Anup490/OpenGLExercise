@@ -85,3 +85,8 @@ namespace ExerciseLightCasters
 {
 	int problem1();
 }
+
+namespace ExerciseMultipleLights
+{
+	int problem1();
+}

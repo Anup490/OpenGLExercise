@@ -157,6 +157,12 @@
     <Filter Include="Resource Files\Shaders\ExerciseLightCasters">
       <UniqueIdentifier>{e3c9ff53-1112-41f9-b501-3ea8058e0bf5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseMultipleLights">
+      <UniqueIdentifier>{a7e91174-967a-4b7e-bd2e-1e8bd503e48e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ExerciseMultipleLights">
+      <UniqueIdentifier>{4113a994-1e33-4205-a86d-33bb53acc207}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -251,6 +257,9 @@
     </ClCompile>
     <ClCompile Include="ExerciseLightCasters.cpp">
       <Filter>Source Files\ExerciseLightCasters</Filter>
+    </ClCompile>
+    <ClCompile Include="ExerciseMultipleLights.cpp">
+      <Filter>Source Files\ExerciseMultipleLights</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -432,6 +441,18 @@
     </None>
     <None Include="exerciselightcasters.frag">
       <Filter>Resource Files\Shaders\ExerciseLightCasters</Filter>
+    </None>
+    <None Include="exercisemultiplelights.vert">
+      <Filter>Resource Files\Shaders\ExerciseMultipleLights</Filter>
+    </None>
+    <None Include="exercisemultiplelights.frag">
+      <Filter>Resource Files\Shaders\ExerciseMultipleLights</Filter>
+    </None>
+    <None Include="multiplelightslight.vert">
+      <Filter>Resource Files\Shaders\ExerciseMultipleLights</Filter>
+    </None>
+    <None Include="multiplelightslight.frag">
+      <Filter>Resource Files\Shaders\ExerciseMultipleLights</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
