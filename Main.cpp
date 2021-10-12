@@ -2,5 +2,5 @@
 
 int main()
 {
-	return ExerciseFrameBuffers::problem1();
+	return ExerciseFrameBuffers::problem2();
 }
