@@ -90,3 +90,8 @@ namespace ExerciseMultipleLights
 {
 	int problem1();
 }
+
+namespace ExerciseFrameBuffers
+{
+	int problem1();
+}

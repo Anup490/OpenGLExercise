@@ -163,6 +163,12 @@
     <Filter Include="Source Files\ExerciseMultipleLights">
       <UniqueIdentifier>{4113a994-1e33-4205-a86d-33bb53acc207}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseFrameBuffers">
+      <UniqueIdentifier>{66e67332-a877-4f14-8553-18c0d965d85d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ExerciseFrameBuffers">
+      <UniqueIdentifier>{42b854cc-09bf-47da-b196-365404a4c512}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -261,6 +267,21 @@
     <ClCompile Include="ExerciseMultipleLights.cpp">
       <Filter>Source Files\ExerciseMultipleLights</Filter>
     </ClCompile>
+    <ClCompile Include="ExerciseFrameBuffers.cpp">
+      <Filter>Source Files\ExerciseFrameBuffers</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseCamera.cpp">
+      <Filter>Source Files\Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraHandler.h">
+      <Filter>Header Files\Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraHandler.cpp">
+      <Filter>Source Files\Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalCamera.cpp">
+      <Filter>Source Files\Wrappers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers.h">
@@ -294,6 +315,15 @@
       <Filter>Header Files\Wrappers</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
+      <Filter>Header Files\Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="ReverseCamera.h">
+      <Filter>Header Files\Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseCamera.h">
+      <Filter>Header Files\Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalCamera.h">
       <Filter>Header Files\Wrappers</Filter>
     </ClInclude>
   </ItemGroup>
@@ -453,6 +483,18 @@
     </None>
     <None Include="multiplelightslight.frag">
       <Filter>Resource Files\Shaders\ExerciseMultipleLights</Filter>
+    </None>
+    <None Include="exerciseframebuffers.vert">
+      <Filter>Resource Files\Shaders\ExerciseFrameBuffers</Filter>
+    </None>
+    <None Include="exerciseframebuffers.frag">
+      <Filter>Resource Files\Shaders\ExerciseFrameBuffers</Filter>
+    </None>
+    <None Include="framebuffer.vert">
+      <Filter>Resource Files\Shaders\ExerciseFrameBuffers</Filter>
+    </None>
+    <None Include="framebuffer.frag">
+      <Filter>Resource Files\Shaders\ExerciseFrameBuffers</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
