@@ -203,7 +203,6 @@ namespace ExerciseFrameBuffers
 			framebuffershader.set_int_uniform("tex", 0);
 			framebufferVAO.bind();
 			glBindTexture(GL_TEXTURE_2D, framebuffertexture);
-			glBindRenderbuffer(GL_RENDERBUFFER, renderbuffer);
 			glDrawArrays(GL_TRIANGLES, 0, 6);
 			framebuffershader.deactivate();
 			framebufferVAO.unbind();
