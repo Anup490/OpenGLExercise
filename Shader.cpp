@@ -104,7 +104,6 @@ void ShaderProgram::link_shaders(GLuint shader_id, GLuints... shader_ids)
 void ShaderProgram::link_shaders()
 {
 	glLinkProgram(id);
-	glCompileShader(id);
 	int has_compiled;
 	glGetShaderiv(id, GL_COMPILE_STATUS, &has_compiled);
 	if (!has_compiled)
