@@ -169,6 +169,12 @@
     <Filter Include="Source Files\ExerciseFrameBuffers">
       <UniqueIdentifier>{42b854cc-09bf-47da-b196-365404a4c512}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ExerciseDeferredShading">
+      <UniqueIdentifier>{1daea484-1ff1-457d-bc61-34669b41110e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseDeferredShading">
+      <UniqueIdentifier>{81434303-54a7-4236-9936-957db0c20ad0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -281,6 +287,9 @@
     </ClCompile>
     <ClCompile Include="NormalCamera.cpp">
       <Filter>Source Files\Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="ExerciseDeferredShading.cpp">
+      <Filter>Source Files\ExerciseDeferredShading</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -495,6 +504,18 @@
     </None>
     <None Include="framebuffer.frag">
       <Filter>Resource Files\Shaders\ExerciseFrameBuffers</Filter>
+    </None>
+    <None Include="exercisedeferredlighting.vert">
+      <Filter>Resource Files\Shaders\ExerciseDeferredShading</Filter>
+    </None>
+    <None Include="exercisedeferredlighting.frag">
+      <Filter>Resource Files\Shaders\ExerciseDeferredShading</Filter>
+    </None>
+    <None Include="fbdeferredlighting.vert">
+      <Filter>Resource Files\Shaders\ExerciseDeferredShading</Filter>
+    </None>
+    <None Include="fbdeferredlighting.frag">
+      <Filter>Resource Files\Shaders\ExerciseDeferredShading</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

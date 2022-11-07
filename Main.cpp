@@ -2,5 +2,5 @@
 
 int main()
 {
-	return ExerciseFrameBuffers::problem2();
+	return ExerciseDeferredShading::problem();
 }

@@ -171,6 +171,7 @@
     <ClCompile Include="ExerciseBasicLighting.cpp" />
     <ClCompile Include="ExerciseCamera.cpp" />
     <ClCompile Include="ExerciseCoordinateSystems.cpp" />
+    <ClCompile Include="ExerciseDeferredShading.cpp" />
     <ClCompile Include="ExerciseFrameBuffers.cpp" />
     <ClCompile Include="ExerciseLightCasters.cpp" />
     <ClCompile Include="ExerciseLightingMaps.cpp" />
@@ -235,6 +236,8 @@
     <None Include="exercisecamera.vert" />
     <None Include="exercisecoordinatesystems.frag" />
     <None Include="exercisecoordinatesystems.vert" />
+    <None Include="exercisedeferredlighting.frag" />
+    <None Include="exercisedeferredlighting.vert" />
     <None Include="exerciseframebuffers.frag" />
     <None Include="exerciseframebuffers.vert" />
     <None Include="exerciselightcasters.frag" />
@@ -253,6 +256,8 @@
     <None Include="exercisemultiplelights.vert" />
     <None Include="exercisetransformations.frag" />
     <None Include="exercisetransformations.vert" />
+    <None Include="fbdeferredlighting.frag" />
+    <None Include="fbdeferredlighting.vert" />
     <None Include="framebuffer.frag" />
     <None Include="framebuffer.vert" />
     <None Include="light.frag" />
