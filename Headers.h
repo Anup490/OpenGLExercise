@@ -9,3 +9,10 @@
 
 const int window_height = 800;
 const int window_width = 800;
+
+struct model_data
+{
+	float* positions;
+	float* normals;
+	float* tex_coords;
+};

@@ -2,6 +2,9 @@
 #include <string.h>
 #include <fstream>
 #include <sstream>
+#include "Base.h"
+
+model* prepare_gltf_model_data(const char* file_path);
 
 namespace ExerciseDeferredShading
 {
@@ -24,59 +27,16 @@ namespace ExerciseDeferredShading
 		glfwMakeContextCurrent(window);
 		gladLoadGL();
 
-		GLfloat cube_vertices[] = {
-			//POSITION				//NORMALS				//TEXCOORDS
-			-0.5f, -0.5f, -0.5f,	0.0f,  0.0f, -1.0f,  0.0f, 0.0f,
-			 0.5f, -0.5f, -0.5f,	0.0f,  0.0f, -1.0f,  1.0f, 0.0f,
-			 0.5f,  0.5f, -0.5f,	0.0f,  0.0f, -1.0f,  1.0f, 1.0f,
-			 0.5f,  0.5f, -0.5f,	0.0f,  0.0f, -1.0f,  1.0f, 1.0f,
-			-0.5f,  0.5f, -0.5f,	0.0f,  0.0f, -1.0f,  0.0f, 1.0f,
-			-0.5f, -0.5f, -0.5f,	0.0f,  0.0f, -1.0f,  0.0f, 0.0f,
+		model* pmodel = prepare_gltf_model_data("D:/Projects/C++/3DImporter/Assets/statue/scene.gltf");
 
-			-0.5f, -0.5f,  0.5f,	0.0f,  0.0f, 1.0f,  0.0f, 0.0f,
-			 0.5f, -0.5f,  0.5f,	0.0f,  0.0f, 1.0f,  1.0f, 0.0f,
-			 0.5f,  0.5f,  0.5f,	0.0f,  0.0f, 1.0f,  1.0f, 1.0f,
-			 0.5f,  0.5f,  0.5f,	0.0f,  0.0f, 1.0f,  1.0f, 1.0f,
-			-0.5f,  0.5f,  0.5f,	0.0f,  0.0f, 1.0f,  0.0f, 1.0f,
-			-0.5f, -0.5f,  0.5f,	0.0f,  0.0f, 1.0f,  0.0f, 0.0f,
+		GLuint VBO;
+		glGenBuffers(1, &VBO);
+		glBindBuffer(GL_ARRAY_BUFFER, VBO);
+		glBufferData(GL_ARRAY_BUFFER, pmodel->pvertices->size() * sizeof(vertex), pmodel->pvertices->data(), GL_STATIC_DRAW);
 
-			-0.5f,  0.5f,  0.5f,	-1.0f,  0.0f,  0.0f,  1.0f, 0.0f,
-			-0.5f,  0.5f, -0.5f,	-1.0f,  0.0f,  0.0f,  1.0f, 1.0f,
-			-0.5f, -0.5f, -0.5f,	-1.0f,  0.0f,  0.0f,  0.0f, 1.0f,
-			-0.5f, -0.5f, -0.5f,	-1.0f,  0.0f,  0.0f,  0.0f, 1.0f,
-			-0.5f, -0.5f,  0.5f,	-1.0f,  0.0f,  0.0f,  0.0f, 0.0f,
-			-0.5f,  0.5f,  0.5f,	-1.0f,  0.0f,  0.0f,  1.0f, 0.0f,
-
-			 0.5f,  0.5f,  0.5f,	1.0f,  0.0f,  0.0f,  1.0f, 0.0f,
-			 0.5f,  0.5f, -0.5f,	1.0f,  0.0f,  0.0f,  1.0f, 1.0f,
-			 0.5f, -0.5f, -0.5f,	1.0f,  0.0f,  0.0f,  0.0f, 1.0f,
-			 0.5f, -0.5f, -0.5f,	1.0f,  0.0f,  0.0f,  0.0f, 1.0f,
-			 0.5f, -0.5f,  0.5f,	1.0f,  0.0f,  0.0f,  0.0f, 0.0f,
-			 0.5f,  0.5f,  0.5f,	1.0f,  0.0f,  0.0f,  1.0f, 0.0f,
-
-			-0.5f, -0.5f, -0.5f,	0.0f, -1.0f,  0.0f,  0.0f, 1.0f,
-			 0.5f, -0.5f, -0.5f,	0.0f, -1.0f,  0.0f,  1.0f, 1.0f,
-			 0.5f, -0.5f,  0.5f,	0.0f, -1.0f,  0.0f,  1.0f, 0.0f,
-			 0.5f, -0.5f,  0.5f,	0.0f, -1.0f,  0.0f,  1.0f, 0.0f,
-			-0.5f, -0.5f,  0.5f,	0.0f, -1.0f,  0.0f,  0.0f, 0.0f,
-			-0.5f, -0.5f, -0.5f,	0.0f, -1.0f,  0.0f,  0.0f, 1.0f,
-
-			-0.5f,  0.5f, -0.5f,	0.0f,  1.0f,  0.0f,  0.0f, 1.0f,
-			 0.5f,  0.5f, -0.5f,	0.0f,  1.0f,  0.0f,  1.0f, 1.0f,
-			 0.5f,  0.5f,  0.5f,	0.0f,  1.0f,  0.0f,  1.0f, 0.0f,
-			 0.5f,  0.5f,  0.5f,	0.0f,  1.0f,  0.0f,  1.0f, 0.0f,
-			-0.5f,  0.5f,  0.5f,	0.0f,  1.0f,  0.0f,  0.0f, 0.0f,
-			-0.5f,  0.5f, -0.5f,	0.0f,  1.0f,  0.0f,  0.0f, 1.0f
-		};
-
-		GLuint VBOcube;
-		glGenBuffers(1, &VBOcube);
-		glBindBuffer(GL_ARRAY_BUFFER, VBOcube);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertices), cube_vertices, GL_STATIC_DRAW);		
-
-		GLuint VAOcube;
-		glGenVertexArrays(1, &VAOcube);
-		glBindVertexArray(VAOcube);
+		GLuint VAO;
+		glGenVertexArrays(1, &VAO);
+		glBindVertexArray(VAO);
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
 		glEnableVertexAttribArray(0);
 		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
@@ -85,6 +45,13 @@ namespace ExerciseDeferredShading
 		glEnableVertexAttribArray(2);
 
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+		GLuint EBO;
+		glGenBuffers(1, &EBO);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER, pmodel->pindices->size() * sizeof(GLuint), pmodel->pindices->data(), GL_STATIC_DRAW);
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+
 		glBindVertexArray(0);
 
 		GLint has_compiled;
@@ -230,11 +197,13 @@ namespace ExerciseDeferredShading
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 			glEnable(GL_DEPTH_TEST);
 
-			glBindBuffer(GL_ARRAY_BUFFER, VBOcube);
-			glBindVertexArray(VAOcube);
+			glBindBuffer(GL_ARRAY_BUFFER, VBO);
+			glBindVertexArray(VAO);
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 			glUseProgram(shader);
-			glDrawArrays(GL_TRIANGLES, 0, 36);
+			glDrawElements(GL_TRIANGLES, pmodel->pindices->size(), GL_UNSIGNED_INT, 0);
 			glBindBuffer(GL_ARRAY_BUFFER, 0);
+			glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 			glBindVertexArray(0);
 			glUseProgram(0);
 
@@ -272,9 +241,9 @@ namespace ExerciseDeferredShading
 		glBindVertexArray(0);
 		glUseProgram(0);
 
-		glDeleteBuffers(1, &VBOcube);
+		glDeleteBuffers(1, &VBO);
 		glDeleteBuffers(1, &framebufferVBO);
-		glDeleteVertexArrays(1, &VAOcube);
+		glDeleteVertexArrays(1, &VAO);
 		glDeleteVertexArrays(1, &framebufferVAO);
 
 		glfwDestroyWindow(window);

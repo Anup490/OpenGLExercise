@@ -291,6 +291,9 @@
     <ClCompile Include="ExerciseDeferredShading.cpp">
       <Filter>Source Files\ExerciseDeferredShading</Filter>
     </ClCompile>
+    <ClCompile Include="GLTFReader.cpp">
+      <Filter>Source Files\Wrappers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers.h">
@@ -333,6 +336,9 @@
       <Filter>Header Files\Wrappers</Filter>
     </ClInclude>
     <ClInclude Include="NormalCamera.h">
+      <Filter>Header Files\Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Base.h">
       <Filter>Header Files\Wrappers</Filter>
     </ClInclude>
   </ItemGroup>
