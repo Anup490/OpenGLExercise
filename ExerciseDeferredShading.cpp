@@ -10,7 +10,7 @@ namespace ExerciseDeferredShading
 {
 	std::string read_shader_file(const char* path);
 
-	int problem()
+	int problemSSAO()
 	{
 		glfwInit();
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);

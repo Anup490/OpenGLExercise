@@ -17,7 +17,7 @@ void main()
 
 	float depth = texture(depthTexture, fbTexCoord).r;
 	float occlusion_factor = 1.0f;
-	const int samples = 49;
+	const int samples = 81;//increase value for better results
 	float d_occlusion_factor = 1.0f / samples;
 	float sample_depth;
 	vec2 sample_texcoords;

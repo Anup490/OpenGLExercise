@@ -99,5 +99,5 @@ namespace ExerciseFrameBuffers
 
 namespace ExerciseDeferredShading
 {
-	int problem();
+	int problemSSAO();
 }
