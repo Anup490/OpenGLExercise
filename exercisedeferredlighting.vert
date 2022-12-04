@@ -9,7 +9,12 @@ out vec2 texCoord;
 
 void main()
 {
-	gl_Position = vec4(aPos, 1.0);
+	float newx = -aPos.z;
+	float newy = aPos.y;
+	float newz = -aPos.x;
+
+	vec3 newPos = vec3(newx - 0.5, newy, newz);
+	gl_Position = vec4(newPos, 1.0);
 	position = aPos;
 	normal = aNormal;
 	texCoord = aTex;

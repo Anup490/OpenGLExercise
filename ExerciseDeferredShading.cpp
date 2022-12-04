@@ -143,12 +143,12 @@ namespace ExerciseDeferredShading
 		glGenFramebuffers(1, &frameBuffer);
 		glBindFramebuffer(GL_FRAMEBUFFER, frameBuffer);
 
-		GLuint depthBuffer;
+		/*GLuint depthBuffer;
 		glGenRenderbuffers(1, &depthBuffer);
 		glBindRenderbuffer(GL_RENDERBUFFER, depthBuffer);
 		glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT32F, framebufferWidth, framebufferHeight);
 		glBindRenderbuffer(GL_RENDERBUFFER, 0);
-		glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthBuffer);	
+		glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthBuffer);*/	
 
 		GLuint positionTexture;
 		glGenTextures(1, &positionTexture);
@@ -183,8 +183,19 @@ namespace ExerciseDeferredShading
 		glBindTexture(GL_TEXTURE_2D, 0);
 		glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT2, GL_TEXTURE_2D, texTexture, 0);
 
-		unsigned attachments[3] = { GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2 };
-		glDrawBuffers(3, attachments);
+		GLuint depthTexture;
+		glGenTextures(1, &depthTexture);
+		glBindTexture(GL_TEXTURE_2D, depthTexture);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, framebufferWidth, framebufferHeight, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
+		glBindTexture(GL_TEXTURE_2D, 0);
+		glFramebufferTexture2D(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, depthTexture, 0);
+
+		unsigned attachments[4] = { GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1, GL_COLOR_ATTACHMENT2 };
+		glDrawBuffers(4, attachments);
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
 		//Framebuffer end
 
@@ -229,6 +240,10 @@ namespace ExerciseDeferredShading
 			glActiveTexture(GL_TEXTURE2);
 			glBindTexture(GL_TEXTURE_2D, texTexture);
 			glUniform1i(glGetUniformLocation(framebufferShader, "texCoordTexture"), 2);
+
+			glActiveTexture(GL_TEXTURE3);
+			glBindTexture(GL_TEXTURE_2D, depthTexture);
+			glUniform1i(glGetUniformLocation(framebufferShader, "depthTexture"), 3);
 			
 			glDrawArrays(GL_TRIANGLES, 0, 6);
 
