@@ -5,6 +5,10 @@ uniform sampler2D positionTexture;
 uniform sampler2D normalTexture;
 uniform sampler2D texCoordTexture;
 uniform sampler2D depthTexture;
+uniform int window_width;
+uniform int window_height;
+uniform int samples_x;
+uniform int samples_y;
 void main()
 {
 	vec3 light_pos = vec3(0.0f,0.0f,0.0f);
@@ -18,12 +22,7 @@ void main()
 	float depth = texture(depthTexture, fbTexCoord).r;
 	float occlusion_factor = 1.0f;
 
-	const int window_width = 800;
-	const int window_height = 800;
-	const int samples_x = 5;
-	const int samples_y = 5;
-
-	const int samples = samples_x * samples_y;
+	int samples = samples_x * samples_y;
 	float diff_occlusion_factor = 1.0f / samples;
 	float x_diff = 1.0f / window_width;
 	float y_diff = 1.0f / window_height;

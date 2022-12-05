@@ -8,6 +8,8 @@ model* prepare_gltf_model_data(const char* file_path);
 
 namespace ExerciseDeferredShading
 {
+	const int ssao_samples = 9;
+
 	std::string read_shader_file(const char* path);
 
 	int problemSSAO()
@@ -143,13 +145,6 @@ namespace ExerciseDeferredShading
 		glGenFramebuffers(1, &frameBuffer);
 		glBindFramebuffer(GL_FRAMEBUFFER, frameBuffer);
 
-		/*GLuint depthBuffer;
-		glGenRenderbuffers(1, &depthBuffer);
-		glBindRenderbuffer(GL_RENDERBUFFER, depthBuffer);
-		glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH_COMPONENT32F, framebufferWidth, framebufferHeight);
-		glBindRenderbuffer(GL_RENDERBUFFER, 0);
-		glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthBuffer);*/	
-
 		GLuint positionTexture;
 		glGenTextures(1, &positionTexture);
 		glBindTexture(GL_TEXTURE_2D, positionTexture);
@@ -244,6 +239,11 @@ namespace ExerciseDeferredShading
 			glActiveTexture(GL_TEXTURE3);
 			glBindTexture(GL_TEXTURE_2D, depthTexture);
 			glUniform1i(glGetUniformLocation(framebufferShader, "depthTexture"), 3);
+
+			glUniform1i(glGetUniformLocation(framebufferShader, "window_width"), window_width);
+			glUniform1i(glGetUniformLocation(framebufferShader, "window_height"), window_height);
+			glUniform1i(glGetUniformLocation(framebufferShader, "samples_x"), ssao_samples);
+			glUniform1i(glGetUniformLocation(framebufferShader, "samples_y"), ssao_samples);
 			
 			glDrawArrays(GL_TRIANGLES, 0, 6);
 
