@@ -17,29 +17,38 @@ void main()
 
 	float depth = texture(depthTexture, fbTexCoord).r;
 	float occlusion_factor = 1.0f;
-	const int samples = 81;//increase value for better results
-	float d_occlusion_factor = 1.0f / samples;
+
+	const int window_width = 800;
+	const int window_height = 800;
+	const int samples_x = 5;
+	const int samples_y = 5;
+
+	const int samples = samples_x * samples_y;
+	float diff_occlusion_factor = 1.0f / samples;
+	float x_diff = 1.0f / window_width;
+	float y_diff = 1.0f / window_height;
 	float sample_depth;
-	vec2 sample_texcoords;
-	for (float dx = -d_occlusion_factor; dx <= d_occlusion_factor; dx+= d_occlusion_factor)
+	float half_sample_x = (samples_x - 1)/2.0f;
+	float half_sample_y = (samples_y - 1)/2.0f;
+	vec2 sample_texcoords = fbTexCoord;
+	sample_texcoords.x -= (half_sample_x * x_diff);
+	sample_texcoords.y -= (half_sample_y * y_diff);
+	for (int y = 0; y < samples_y; y++)
 	{
-		for (float dy = -d_occlusion_factor; dy <= d_occlusion_factor; dy+= d_occlusion_factor)
+		for (int x = 0; x < samples_x; x++)
 		{
-			sample_texcoords = vec2(fbTexCoord.x + dx, fbTexCoord.y + dy);
 			if (sample_texcoords.x > 0.0f && sample_texcoords.x < 1.0f && sample_texcoords.y > 0.0f && sample_texcoords.y < 1.0f)
 			{
 				sample_depth = texture(depthTexture, sample_texcoords).r;
-				if (sample_depth > depth)
-					occlusion_factor -= d_occlusion_factor;
+				if (sample_depth < depth)
+					occlusion_factor -= diff_occlusion_factor;
+				sample_texcoords.x += x_diff;
 			}
 		}
-	}	
-
-	if (occlusion_factor < 1.0f)
-	{
-		depth *= occlusion_factor;
-		FragColor = vec4(vec3(depth, depth, depth), 1.0f);
+		sample_texcoords.y += y_diff;
+		sample_texcoords.x -= (samples_x * x_diff);
 	}
-	else
-		FragColor = vec4(vec3(depth, depth, depth), 1.0f);
+
+	depth *= occlusion_factor;
+	FragColor = vec4(vec3(depth, depth, depth), 1.0f);
 }
