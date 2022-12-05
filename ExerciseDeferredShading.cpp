@@ -8,7 +8,7 @@ model* prepare_gltf_model_data(const char* file_path);
 
 namespace ExerciseDeferredShading
 {
-	const int ssao_samples = 9;
+	const int ssao_samples = 25;
 
 	std::string read_shader_file(const char* path);
 

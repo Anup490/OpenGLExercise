@@ -22,30 +22,33 @@ void main()
 	float depth = texture(depthTexture, fbTexCoord).r;
 	float occlusion_factor = 1.0f;
 
-	int samples = samples_x * samples_y;
-	float diff_occlusion_factor = 1.0f / samples;
-	float x_diff = 1.0f / window_width;
-	float y_diff = 1.0f / window_height;
-	float sample_depth;
-	float half_sample_x = (samples_x - 1)/2.0f;
-	float half_sample_y = (samples_y - 1)/2.0f;
-	vec2 sample_texcoords = fbTexCoord;
-	sample_texcoords.x -= (half_sample_x * x_diff);
-	sample_texcoords.y -= (half_sample_y * y_diff);
-	for (int y = 0; y < samples_y; y++)
+	if (depth < 1.0f)
 	{
-		for (int x = 0; x < samples_x; x++)
+		int samples = samples_x * samples_y;
+		float diff_occlusion_factor = 1.0f / samples;
+		float x_diff = 1.0f / window_width;
+		float y_diff = 1.0f / window_height;
+		float sample_depth;
+		float half_sample_x = (samples_x - 1)/2.0f;
+		float half_sample_y = (samples_y - 1)/2.0f;
+		vec2 sample_texcoords = fbTexCoord;
+		sample_texcoords.x -= (half_sample_x * x_diff);
+		sample_texcoords.y -= (half_sample_y * y_diff);
+		for (int y = 0; y < samples_y; y++)
 		{
-			if (sample_texcoords.x > 0.0f && sample_texcoords.x < 1.0f && sample_texcoords.y > 0.0f && sample_texcoords.y < 1.0f)
+			for (int x = 0; x < samples_x; x++)
 			{
-				sample_depth = texture(depthTexture, sample_texcoords).r;
-				if (sample_depth < depth)
-					occlusion_factor -= diff_occlusion_factor;
-				sample_texcoords.x += x_diff;
+				if (sample_texcoords.x > 0.0f && sample_texcoords.x < 1.0f && sample_texcoords.y > 0.0f && sample_texcoords.y < 1.0f)
+				{
+					sample_depth = texture(depthTexture, sample_texcoords).r;
+					if (sample_depth < depth)
+						occlusion_factor -= diff_occlusion_factor;
+					sample_texcoords.x += x_diff;
+				}
 			}
+			sample_texcoords.y += y_diff;
+			sample_texcoords.x -= (samples_x * x_diff);
 		}
-		sample_texcoords.y += y_diff;
-		sample_texcoords.x -= (samples_x * x_diff);
 	}
 
 	depth *= occlusion_factor;
