@@ -7,7 +7,7 @@ Contains various examples pertaining to 3D and graphics, done as part of OpenGL 
 
 ###### Libraries: OpenGL
 
-###### SSAO example :
+###### Basic Ambient Occlusion example :
 ![AOdemo](https://user-images.githubusercontent.com/19874814/235447503-402a2750-237a-4c99-886a-68cea99daea8.png)
 
 ###### Biochemical environment lighting example
