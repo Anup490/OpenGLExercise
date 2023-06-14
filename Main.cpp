@@ -2,5 +2,5 @@
 
 int main()
 {
-	return ExerciseDeferredShading::problemSSAO();
+	return ExercisePBR::problem1();
 }

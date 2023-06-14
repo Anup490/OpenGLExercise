@@ -177,6 +177,7 @@
     <ClCompile Include="ExerciseLightingMaps.cpp" />
     <ClCompile Include="ExerciseMaterials.cpp" />
     <ClCompile Include="ExerciseMultipleLights.cpp" />
+    <ClCompile Include="ExercisePBR.cpp" />
     <ClCompile Include="ExerciseTransformations.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="GLTFReader.cpp" />
@@ -256,6 +257,8 @@
     <None Include="exercisematerials.vert" />
     <None Include="exercisemultiplelights.frag" />
     <None Include="exercisemultiplelights.vert" />
+    <None Include="exercisepbr.frag" />
+    <None Include="exercisepbr.vert" />
     <None Include="exercisetransformations.frag" />
     <None Include="exercisetransformations.vert" />
     <None Include="fbdeferredlighting.frag" />

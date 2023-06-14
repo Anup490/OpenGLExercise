@@ -101,3 +101,8 @@ namespace ExerciseDeferredShading
 {
 	int problemSSAO();
 }
+
+namespace ExercisePBR
+{
+	int problem1();
+}

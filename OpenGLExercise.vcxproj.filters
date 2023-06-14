@@ -175,6 +175,12 @@
     <Filter Include="Resource Files\Shaders\ExerciseDeferredShading">
       <UniqueIdentifier>{81434303-54a7-4236-9936-957db0c20ad0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ExercisePBR">
+      <UniqueIdentifier>{7ff4ff7e-d90f-45df-be87-96b20bcb7869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\ExercisePBR">
+      <UniqueIdentifier>{b2eb1f70-d29a-4f4e-ac9b-c9fb020edb2e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -293,6 +299,9 @@
     </ClCompile>
     <ClCompile Include="GLTFReader.cpp">
       <Filter>Source Files\Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="ExercisePBR.cpp">
+      <Filter>Source Files\ExercisePBR</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -522,6 +531,12 @@
     </None>
     <None Include="fbdeferredlighting.frag">
       <Filter>Resource Files\Shaders\ExerciseDeferredShading</Filter>
+    </None>
+    <None Include="exercisepbr.vert">
+      <Filter>Resource Files\Shaders\ExercisePBR</Filter>
+    </None>
+    <None Include="exercisepbr.frag">
+      <Filter>Resource Files\Shaders\ExercisePBR</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
