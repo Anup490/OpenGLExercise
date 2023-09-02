@@ -181,6 +181,12 @@
     <Filter Include="Resource Files\Shaders\ExercisePBR">
       <UniqueIdentifier>{b2eb1f70-d29a-4f4e-ac9b-c9fb020edb2e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ExerciseAnimation">
+      <UniqueIdentifier>{db1eb6c0-b724-4034-98d2-5a5db0d7e229}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\ExerciseAnimation">
+      <UniqueIdentifier>{021ef77e-2c3c-475b-a3a1-136bbbb9242a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -303,6 +309,18 @@
     <ClCompile Include="ExercisePBR.cpp">
       <Filter>Source Files\ExercisePBR</Filter>
     </ClCompile>
+    <ClCompile Include="AnimationMesh.cpp">
+      <Filter>Source Files\ExerciseAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationShader.cpp">
+      <Filter>Source Files\ExerciseAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationModel.cpp">
+      <Filter>Source Files\ExerciseAnimation</Filter>
+    </ClCompile>
+    <ClCompile Include="ExerciseAnimation.cpp">
+      <Filter>Source Files\ExerciseAnimation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers.h">
@@ -349,6 +367,9 @@
     </ClInclude>
     <ClInclude Include="Base.h">
       <Filter>Header Files\Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationHeaders.h">
+      <Filter>Source Files\ExerciseAnimation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -537,6 +558,12 @@
     </None>
     <None Include="exercisepbr.frag">
       <Filter>Resource Files\Shaders\ExercisePBR</Filter>
+    </None>
+    <None Include="exerciseanimation.vert">
+      <Filter>Resource Files\Shaders\ExerciseAnimation</Filter>
+    </None>
+    <None Include="exerciseanimation.frag">
+      <Filter>Resource Files\Shaders\ExerciseAnimation</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

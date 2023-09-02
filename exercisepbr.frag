@@ -50,7 +50,7 @@ void main()
 
 	vec3 finalColor = (T1 + T2) * T3;
 	vec3 texColor = mix(texture(tex0, texCoord), texture(tex1, texCoord), 0.5).xyz;
-	FragColor = vec4(finalColor, 1.0);
+	FragColor = vec4(finalColor * texColor, 1.0);
 }
 
 float normal_distribution(float roughness, vec3 normal, vec3 halfway_vec)

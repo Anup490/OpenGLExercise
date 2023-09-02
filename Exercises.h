@@ -106,3 +106,8 @@ namespace ExercisePBR
 {
 	int problem1();
 }
+
+namespace ExerciseAnimation
+{
+	int problem1();
+}

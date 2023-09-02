@@ -2,5 +2,5 @@
 
 int main()
 {
-	return ExercisePBR::problem1();
+	return ExerciseAnimation::problem1();
 }
